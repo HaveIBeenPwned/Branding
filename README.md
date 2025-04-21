@@ -4,10 +4,10 @@ A collection of branded assets to be used freely by anyone who needs them 🙂 T
 The assets are broken down into the following folders:
 
 ## [Icons](Icons)
-It's jsut the stylised version of ';-- which is typically used as a simple representation of the brand. It's on social channels, the favicon of the website etc.
+It's just the stylised version of ';-- which is typically used as a simple representation of the brand. It's on social channels, the favicon of the website etc.
 
 ## [Logos](Logos)
-These are the fundamental basic logos all in vector format. There probably aren't many use cases for these alone as they stand, but they're the building blocks from which many other cool things can be built.
+These are the fundamental basic logos, all in vector format. There probably aren't many use cases for these alone as they stand, but they're the building blocks from which many other cool things can be built.
 
 ## [Merch](Merch)
 This is *real* stuff - things you can actually hold in your hands! It includes:
