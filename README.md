@@ -19,4 +19,8 @@ Self-explanatory. You can either get these printed wherever you want or order th
 These can be used for either PC wallpapers or the hero image on social channels. They're presented here in lots of different dimensions to meet typical desktop sizes. Some of them are *very* wide, simply due to multi-monitor setups.
 
 ## [Special Use Cases](https://github.com/HaveIBeenPwned/Branding/tree/main/Special%20Use%20Cases)
-Lots of random bits and pieces made for specific purposes and possibly not relavent anywhere else, but they're all here anyway.
+Lots of random bits and pieces made for specific purposes and possibly not relevant anywhere else, but they're all here anyway.
+
+## Trade Mark
+Have I Been Pwned® [is a registered trade mark](https://search.ipaustralia.gov.au/trademarks/search/view/2010477) of Superlative Enterprises Pty Ltd.
+The Have I Been Pwned logo [is a registered trade mark](https://search.ipaustralia.gov.au/trademarks/search/view/2529120) of Superlative Enterprises Pty Ltd.
