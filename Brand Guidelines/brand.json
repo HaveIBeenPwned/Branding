@@ -155,6 +155,21 @@
       }
     ],
     "symbol": "The logo's ';-- represents a component of a SQL injection attack, the vector by which many data breaches in HIBP were caused. The distinctive mark comprises five angled bars. Preserve its supplied geometry; use the standalone asset where a full wordmark is impractical.",
+    "geometry": {
+      "diagram": "assets/icon-geometry.svg",
+      "source": "Logos/Icon/Icon.svg",
+      "components": "Five parallelograms, each with two pairs of parallel sides and the same horizontal edge width. Heights vary to form the punctuation.",
+      "alignment": "The stacked pair follows the same two slanted side lines. The two dashes share top and bottom edges, and all four upper components end on a common horizontal baseline.",
+      "lean": "Approximately 11 degrees from vertical, leaning forward.",
+      "sourceMeasurements": {
+        "coordinateSystem": "Supplied SVG viewBox units, not output pixels or minimum-size rules.",
+        "horizontalEdgeWidth": 40.3,
+        "upperBaselineY": 83.4,
+        "dashTopY": 51.4
+      },
+      "precision": "The diagram preserves all five source paths unchanged. Construction guides describe the intended alignments; the source SVG uses rounded coordinates, so the near-identical side slopes must not be treated as an exact reconstruction formula.",
+      "usage": "Scale the supplied icon uniformly as one unit. Do not independently alter the bars, gaps or angles, or redraw the icon from the diagram."
+    },
     "animation": {
       "usage": "The animated icon indicates that data is loading or a request is in progress. Pair it with a short status label and replace it with the result or error when work ends. It is not decoration or a percentage-complete indicator.",
       "source": "https://haveibeenpwned.com/",
