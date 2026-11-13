@@ -17,6 +17,32 @@ For questions about using the HIBP brand, visit [support.haveibeenpwned.com](htt
 Switzer loads from Fontshare's CDN and requires a network connection.
 The book and token files are maintained manually; there is no automatic generation pipeline.
 
+## Website deployment
+
+The `.github/workflows/pages.yml` workflow deploys this directory to GitHub Pages on every push to `main`.
+It can also be run manually from the Actions tab.
+Source files stay here; deployment copies this directory's contents into `_site/`,
+copies `brand-book.html` to `index.html` and adds `.nojekyll`.
+The homepage is served directly, without an HTML redirect.
+
+1. In repository **Settings > Pages > Build and deployment**, select **GitHub Actions** as the source.
+2. Push the workflow to `main` and confirm the Pages deployment succeeds in the Actions tab.
+   Before configuring a custom domain, check `https://haveibeenpwned.github.io/Branding/`
+   and `https://haveibeenpwned.github.io/Branding/brand.json`.
+3. When ready to use the production domain, set **Custom domain** in GitHub Pages to `branding.haveibeenpwned.com` and save.
+4. In Cloudflare DNS for `haveibeenpwned.com`, create a **CNAME** named `branding`
+   targeting `haveibeenpwned.github.io`, initially set to **DNS only** (grey cloud).
+   The target must not include `https://` or a repository path.
+5. Wait for GitHub's DNS check and certificate provisioning, then enable **Enforce HTTPS** in GitHub Pages.
+6. Verify `https://branding.haveibeenpwned.com/` and `https://branding.haveibeenpwned.com/brand.json`.
+   In the browser's Network panel, reload and check that images and the Fontshare stylesheet/fonts load successfully.
+   Also check `/tokens.css`, `/tokens.json` and `/assets/Hero.svg`.
+
+The custom domain is managed natively in GitHub Pages settings; this Actions deployment does not need a `CNAME` file.
+Leave it unset until the initial GitHub Pages URL has been checked.
+Relative asset paths support both the repository URL and the custom-domain root.
+Once the custom domain is enabled, GitHub Pages redirects the default repository URL to it.
+
 ## What's in the book
 
 1. Introduction
