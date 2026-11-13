@@ -1,0 +1,54 @@
+/*
+ * Have I Been Pwned - design tokens
+ * Kept in sync with brand.json; update that source first.
+ */
+
+:root {
+  /* Semantic colour roles */
+  --hibp-color-background: #030304;
+  --hibp-color-surface: #131A20;
+  --hibp-color-border: #374A5A;
+  --hibp-color-muted: #6A8AA4;
+  --hibp-color-foreground: #F6F8FA;
+  --hibp-color-accent: #1D72A7;
+  --hibp-color-accent-text: #F6F8FA;
+  --hibp-color-accent-secondary: #152B39;
+
+  /* Full greyscale ramp */
+  --hibp-grey-000: #F6F8FA; /* White */
+  --hibp-grey-100: #ECF1F4;
+  --hibp-grey-200: #D9E2E8;
+  --hibp-grey-300: #C1CFD9;
+  --hibp-grey-400: #9CB1C2;
+  --hibp-grey-500: #6A8AA4;
+  --hibp-grey-600: #4B667B;
+  --hibp-grey-700: #374A5A;
+  --hibp-grey-800: #1D282F;
+  --hibp-grey-900: #131A20;
+  --hibp-grey-1000: #030304; /* Black */
+
+  /* Typography */
+  --hibp-font-display: "Switzer", sans-serif;
+  --hibp-font-body: "Switzer", sans-serif;
+  --hibp-font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --hibp-text-h1: 40px;
+  --hibp-text-h2: 32px;
+  --hibp-text-h3: 28px;
+  --hibp-text-h4: 24px;
+  --hibp-text-h5: 20px;
+  --hibp-text-h6: 16px;
+  --hibp-text-display-1: 64px;
+  --hibp-text-display-2: 48px;
+  --hibp-text-display-3: 36px;
+  --hibp-text-display-4: 28px;
+  --hibp-text-body-medium: 16px;
+  --hibp-text-body-small: 14px;
+  --hibp-text-lead: 18px;
+
+  /* Layout */
+  --hibp-radius: 8px;
+  --hibp-radius-button: 12px;
+  --hibp-radius-large: 16px;
+  --hibp-spacing-base: 8px;
+}

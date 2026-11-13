@@ -1,0 +1,307 @@
+{
+  "name": "Have I Been Pwned",
+  "shortName": "HIBP",
+  "brandingSupportUrl": "https://support.haveibeenpwned.com",
+  "tagline": "Check if your email address is in a data breach",
+  "mission": "Have I Been Pwned helps people and organisations understand their exposure to data breaches and take informed action. It combines accessible public services with breach intelligence for the professionals protecting others.",
+  "positioning": {
+    "description": "An independent, trusted guide to data-breach exposure: approachable enough for anyone, credible enough for security professionals.",
+    "desiredOutcome": "Informed agency, not fear or reassurance beyond the evidence.",
+    "identity": "Founder-led and personally accountable, supported by a visible team. Do not describe HIBP as a one-person operation.",
+    "naming": "Use Have I Been Pwned on first mention and HIBP thereafter. Retain Pwned Passwords as the service name. Explain 'pwned' in plain English for unfamiliar audiences; use supplied artwork rather than typing a replacement logo."
+  },
+  "values": [
+    "Public benefit at the core, with free email checking, notifications and Pwned Passwords alongside paid services",
+    "Transparent about data sources and methodology",
+    "Pragmatic and matter-of-fact, never alarmist",
+    "Evidence-based credibility over marketing spin",
+    "Privacy-respecting in how data is collected, stored and shown",
+    "Clear commercial terms and visibly identified sponsorships"
+  ],
+  "audience": [
+    "Everyday internet users checking their own exposure",
+    "Security professionals and researchers",
+    "Organisations and developers integrating via the API",
+    "Journalists and media covering breaches",
+    "Government and enterprise subscribers to domain monitoring"
+  ],
+  "audienceGuidance": {
+    "individuals": "Lead with the task, explain the finding and give proportionate next steps. State which services are free.",
+    "professionals": "Lead with coverage, integration, privacy controls and operational limits. Explain paid capabilities without fear-based selling.",
+    "media": "Provide attributable sources, dated statistics and precise descriptions of relationships. Do not turn usage or a citation into an endorsement."
+  },
+  "colors": [
+    {
+      "role": "background",
+      "name": "Black",
+      "hex": "#030304",
+      "oklch": "oklch(0.098 0.004 285.6)",
+      "usage": "Near-black foundation for the website and product UI, with deep-blue atmospheric gradients where appropriate."
+    },
+    {
+      "role": "surface",
+      "name": "Grey 900",
+      "hex": "#131A20",
+      "oklch": "oklch(0.214 0.016 244.5)",
+      "usage": "Solid panel colour. The live site also uses translucent blue gradients for cards and stat tiles; not every surface is a flat grey fill."
+    },
+    {
+      "role": "border",
+      "name": "Grey 700",
+      "hex": "#374A5A",
+      "oklch": "oklch(0.4 0.036 244.3)",
+      "usage": "Dividers, input borders, card outlines and other low-emphasis structural lines."
+    },
+    {
+      "role": "muted",
+      "name": "Grey 500",
+      "hex": "#6A8AA4",
+      "oklch": "oklch(0.619 0.054 243.3)",
+      "usage": "A muted blue-grey option for secondary labels and captions. Check contrast on the actual background; this is not a universal body-text colour."
+    },
+    {
+      "role": "foreground",
+      "name": "White",
+      "hex": "#F6F8FA",
+      "oklch": "oklch(0.978 0.003 247.9)",
+      "usage": "Primary off-white text and iconography on dark backgrounds, and light input surfaces."
+    },
+    {
+      "role": "accent",
+      "name": "Pwned Blue",
+      "hex": "#1D72A7",
+      "oklch": "oklch(0.529 0.113 241.9)",
+      "accentText": "#F6F8FA",
+      "usage": "Primary brand blue for actions, links, data emphasis, borders and atmospheric treatments. Multiple uses may coexist; preserve a clear action hierarchy rather than imposing a once-per-view limit."
+    },
+    {
+      "role": "accent-secondary",
+      "name": "Deep Navy",
+      "hex": "#152B39",
+      "oklch": "oklch(0.278 0.038 238.2)",
+      "usage": "Deep-blue foundation for secondary controls and atmospheric backgrounds. May be used as a solid fill or in gradients."
+    }
+  ],
+  "greyscale": [
+    { "name": "White", "hex": "#F6F8FA" },
+    { "name": "Grey 100", "hex": "#ECF1F4" },
+    { "name": "Grey 200", "hex": "#D9E2E8" },
+    { "name": "Grey 300", "hex": "#C1CFD9" },
+    { "name": "Grey 400", "hex": "#9CB1C2" },
+    { "name": "Grey 500", "hex": "#6A8AA4" },
+    { "name": "Grey 600", "hex": "#4B667B" },
+    { "name": "Grey 700", "hex": "#374A5A" },
+    { "name": "Grey 800", "hex": "#1D282F" },
+    { "name": "Grey 900", "hex": "#131A20" },
+    { "name": "Black", "hex": "#030304" }
+  ],
+  "typography": {
+    "display": {
+      "family": "Switzer",
+      "weight": "Bold / Bold Italic",
+      "usage": "Bold upright for product headings; bold italic for selected editorial display treatments. Use supplied SVGs for the wordmark, never recreate it with live text."
+    },
+    "body": {
+      "family": "Switzer",
+      "weight": "Regular / Medium",
+      "usage": "Body copy, UI labels, buttons and form fields. Use a readable neutral tone for sustained reading."
+    },
+    "mono": {
+      "family": "ui-monospace, 'SFMono-Regular', Consolas, monospace",
+      "usage": "Not yet formalised in the existing design file. Recommended system monospace stack for API/code samples until a brand mono is chosen."
+    },
+    "responsive": "Treat the scale as a reference, not a fixed size for every viewport. Keep statistical values together; use labelled abbreviations such as 17.9B where needed and retain access to the exact value. Never split a number across lines.",
+    "scale": {
+      "h1": "40px",
+      "h2": "32px",
+      "h3": "28px",
+      "h4": "24px",
+      "h5": "20px",
+      "h6": "16px",
+      "display1": "64px",
+      "display2": "48px",
+      "display3": "36px",
+      "display4": "28px",
+      "bodyMedium": "16px",
+      "bodySmall": "14px",
+      "lead": "18px"
+    }
+  },
+  "logo": {
+    "primary": "Two-line 'Have I Been / ;--Pwned' hero lockup. Preserve the supplied artwork's continuous pale-blue (#C8E5F8) to Pwned Blue (#1D72A7) gradient across both lines.",
+    "compact": "Single-line ';--Pwned' wordmark in off-white (#F6F8FA), used in website navigation.",
+    "assets": {
+      "hero": "assets/Hero.svg",
+      "compact": "assets/HibpLogo.svg",
+      "icon": "assets/Icon.svg",
+      "iconPwned": "assets/IconPwned.svg",
+      "iconHaveIBeenPwned": "assets/IconHaveIBeenPwned.svg"
+    },
+    "forms": [
+      {
+        "name": "Icon only",
+        "source": "Logos/Icon/Icon.svg",
+        "usage": "Avatars, favicons, loading states and small placements where HIBP is already identified. On merchandise, a discreet chest detail or cap/visor emblem."
+      },
+      {
+        "name": "Icon + Pwned",
+        "source": "Logos/Icon Pwned/Icon Pwned.svg",
+        "usage": "Compact wordmark for navigation, horizontal spaces and familiar audiences. On merchandise, chest embroidery, central tee prints, polos and caps."
+      },
+      {
+        "name": "Icon + Have I Been Pwned",
+        "source": "Logos/Icon Have I Been Pwned/Icon Have I Been Pwned.svg",
+        "usage": "Full introduction for covers, prominent placements and unfamiliar audiences. The stacked form suits drinkware and taller spaces; small chest applications need legibility checks."
+      }
+    ],
+    "symbol": "The logo's ';-- represents a component of a SQL injection attack, the vector by which many data breaches in HIBP were caused. The distinctive mark comprises five angled bars. Preserve its supplied geometry; use the standalone asset where a full wordmark is impractical.",
+    "animation": {
+      "usage": "The animated icon indicates that data is loading or a request is in progress. Pair it with a short status label and replace it with the result or error when work ends. It is not decoration or a percentage-complete indicator.",
+      "source": "https://haveibeenpwned.com/",
+      "stylesheet": "https://haveibeenpwned.com/css/main-C33QKkeM.css",
+      "retrievedOn": "2026-11-13",
+      "effect": "The homepage pulseFade animation keeps all five bars fixed in place, fading opacity from 0.3 to 1 and back while fill changes from #F6F8FA to #1D72A7 and back.",
+      "duration": "1.5s",
+      "easing": "ease-in-out",
+      "iterations": "infinite while the operation is pending",
+      "pieceDelays": ["0s", "0.3s", "0.6s", "0.9s", "1.2s"],
+      "accessibility": "Retain a readable status label without relying on motion alone. The guidelines example adds a static full-opacity off-white fallback for reduced-motion preferences and print.",
+      "example": "Embedded inline in brand-book.html on the symbol spread; source SVG paths and timing are preserved, with scoped CSS and the primary colour mapped to the book's accent variable."
+    },
+    "clearSpace": "Keep the mark visibly separate from surrounding text, controls and imagery. A numerical exclusion zone has not yet been approved.",
+    "minSize": "Check legibility at the final output size and use the compact or standalone asset when space is limited. Numerical screen and print minimums remain to be validated.",
+    "donts": [
+      "Don't recolour the logo outside the defined brand palette",
+      "Don't stretch or skew the mark. Keep the normal orientation in interfaces; merchandise layouts may orient whole marks deliberately without altering their geometry.",
+      "Don't add drop shadows, outlines, bevels or other effects",
+      "Don't place functional or identifying logos on busy or low-contrast backgrounds. Tonal decorative merchandise is a distinct treatment and needs physical proofing.",
+      "Don't retype, rebuild or combine pieces to recreate the wordmark",
+      "Don't separate the symbol from its angled, italic construction"
+    ]
+  },
+  "voice": {
+    "weAre": [
+      "Direct and matter-of-fact",
+      "Pragmatic, evidence-based and credible",
+      "Quietly witty, never forced",
+      "Transparent about what data is and isn't shown",
+      "Human, respectful and commercially clear without pressure"
+    ],
+    "weAreNot": [
+      "Alarmist or fear-mongering",
+      "Bureaucratic or needlessly jargon-heavy",
+      "Preachy about security hygiene",
+      "Salesy or hype-driven",
+      "Vague about sources or methodology"
+    ],
+    "vocabulary": {
+      "use": ["pwned (explain when needed)", "breach", "exposed", "compromised (when supported)", "check", "free (identify the service)", "data"],
+      "avoid": ["hacked (unless established)", "victim (prefer affected person outside legal contexts)", "revolutionary", "best-in-class", "guaranteed safe"]
+    },
+    "registers": {
+      "product": "Concise and direct, written for a non-technical reader checking their own exposure.",
+      "social": "Understated humour is welcome, but an affected person's situation is never the joke.",
+      "documentation": "Precise, technical and example-driven for the API and developer audience.",
+      "press": "Measured, factual and attributable. Distinguish reported allegations, verified findings and uncertainty.",
+      "commercial": "Confident and useful: explain capabilities, pricing and limits without using exposure findings to pressure a purchase."
+    }
+  },
+  "brandExpressions": {
+    "purpose": "Extend the HIBP visual language to words naming official destinations, features and editorial topics. These are related title treatments, not replacement logos or additional primary logo forms.",
+    "construction": "Use the supplied icon beside bold italic Switzer lettering. Balance scale, alignment and spacing, preserve the icon geometry and carry a coherent pale-blue-to-Pwned-Blue gradient across the group on a dark atmospheric background.",
+    "hierarchy": "Use selectively for destination banners and feature or demo titles, not every interface label. Keep HIBP attribution clear in the surrounding context.",
+    "longTitles": "Size or reflow the title to fit the composition without stretching the icon or condensing the lettering. Check legibility at thumbnail size.",
+    "primaryLogoBoundary": "Do not retype or alter existing primary HIBP logos. Creating a related title treatment does not rename the organisation or introduce a fourth primary form.",
+    "exampleArtwork": "Recreated vector illustrations, not copies of the source banners or thumbnails. All use a 1200 x 540 canvas, identical type and icon scale, a continuous blue gradient and the same dark background. Secondary logos are omitted to isolate the title treatment. Switzer Bold Italic lettering is outlined so the artwork has no external font dependency.",
+    "reviewedOn": "2026-11-13",
+    "examples": [
+      {
+        "title": "Merch",
+        "source": "https://merch.haveibeenpwned.com/en-aud",
+        "image": "assets/expressions/merch.svg",
+        "context": "Recreated icon-plus-destination title, inspired by the official store banner."
+      },
+      {
+        "title": "Domain Search",
+        "source": "https://haveibeenpwned.com/Demos",
+        "video": "https://www.youtube.com/watch?v=oi_xcOEx5uI",
+        "imageSource": "https://i.ytimg.com/vi/oi_xcOEx5uI/maxresdefault.jpg",
+        "image": "assets/expressions/domain-search.svg",
+        "context": "Recreated icon-led feature title, inspired by the demo thumbnail without its secondary HIBP logo."
+      },
+      {
+        "title": "Breached Account API",
+        "source": "https://haveibeenpwned.com/Demos",
+        "video": "https://www.youtube.com/watch?v=qCcb9I_Uf5Y",
+        "imageSource": "https://i.ytimg.com/vi/qCcb9I_Uf5Y/maxresdefault.jpg",
+        "image": "assets/expressions/breached-account-api.svg",
+        "context": "Recreated longer demo title, using the same visual treatment without the thumbnail's secondary HIBP logo."
+      }
+    ]
+  },
+  "merchandise": {
+    "store": "https://merch.haveibeenpwned.com/",
+    "catalogue": "https://merch.haveibeenpwned.com/en-usd/collections/all",
+    "reviewedOn": "2026-11-13",
+    "reviewScope": "All 42 catalogue listings, including sold-out products, with 83 catalogue image views. Product pages were retrieved; not every size or colour variant was individually rendered.",
+    "principles": [
+      "The three logo forms remain the foundation; the hero gradient is a treatment of the full form, not a fourth logo form.",
+      "Garment and object colours need not match the interface palette. Preserve the supplied logo geometry and choose a suitable print or embroidery treatment.",
+      "Tonal embroidery is a decorative merchandise treatment, not a precedent for low-contrast interfaces.",
+      "Whole marks may repeat or be oriented deliberately for a product surface. Account for seams, edges and curves without distorting individual elements.",
+      "Slogan designs express personality on merchandise; they are not replacement primary logos or templates for sensitive breach communications.",
+      "Mockups demonstrate placement, not exact ink or thread colours. Check legibility, spacing and stitch detail with production proofs."
+    ],
+    "examples": [
+      { "name": "Pwned Icon Blue Logo Tee - Embroidered", "form": "Icon only", "image": "assets/merch/icon-tee.webp", "source": "https://merch.haveibeenpwned.com/products/pwned-icon-tee-embroidered" },
+      { "name": "Pwn Shield Visor", "form": "Icon only", "image": "assets/merch/icon-visor.webp", "source": "https://merch.haveibeenpwned.com/products/pwn-shield-visor-4" },
+      { "name": "Just Another Pwned Tee", "form": "Icon + Pwned", "image": "assets/merch/pwned-tee.webp", "source": "https://merch.haveibeenpwned.com/products/just-another-pwned-tee" },
+      { "name": "The Pwned Hoodie - Embroidered", "form": "Icon + Pwned", "image": "assets/merch/pwned-hoodie.webp", "source": "https://merch.haveibeenpwned.com/products/the-pwned-hoodie-embroidered-2" },
+      { "name": "Pwned to Go", "form": "Icon + Have I Been Pwned", "image": "assets/merch/full-tumbler.webp", "source": "https://merch.haveibeenpwned.com/products/pwned-to-go" },
+      { "name": "HIBP Classic Hoodie", "form": "Icon + Have I Been Pwned", "image": "assets/merch/full-hoodie.webp", "source": "https://merch.haveibeenpwned.com/products/hibp-classic-hoodie" },
+      { "name": "Pwn Patrol - Icon", "form": "Icon only", "image": "assets/merch/tonal-cap.webp", "source": "https://merch.haveibeenpwned.com/products/pwn-patrol-icon-2" },
+      { "name": "Breach Towel", "form": "Icon + Pwned", "image": "assets/merch/repeat-towel.webp", "source": "https://merch.haveibeenpwned.com/products/breach-towel" },
+      { "name": "Oh No - Pwned! Tee", "form": "Merchandise slogan using Icon + Pwned", "image": "assets/merch/slogan-tee.webp", "source": "https://merch.haveibeenpwned.com/products/oh-no-pwned-tee" }
+    ]
+  },
+  "communication": {
+    "noMatch": "This email address wasn't found in the breaches loaded into HIBP. That does not rule out exposure elsewhere.",
+    "match": "Your email address appeared in this breach. Review the affected data and the recommended next steps.",
+    "notification": "State when a breach occurred separately from when it was added to HIBP. Newly added does not necessarily mean newly breached.",
+    "action": "Base advice on the exposed data. Where passwords were exposed, advise changing affected or reused passwords; do not imply every finding proves current account takeover.",
+    "privacy": "Describe safeguards for the specific feature. Pwned Passwords and email searches have different data flows; do not claim all searches are anonymous or that nothing is ever logged.",
+    "sensitiveData": "Use synthetic examples in demonstrations. Respect sensitive-breach access controls and avoid exposing a person's breach history in brand materials."
+  },
+  "credibility": {
+    "claims": "Use attributable evidence instead of unsupported superlatives. Distinguish recommendations, integrations, data contributions and customer relationships; none automatically implies certification or blanket endorsement.",
+    "statistics": "Label what is counted and give the source and as-of date in published materials. Addresses and records are not interchangeable with unique people. Distinguish breach date from date added.",
+    "sponsorship": "Label sponsored content at the point of display and keep it visually separate from breach findings. A partner's protection claim is not an HIBP product capability.",
+    "ownership": "Describe HIBP as independently owned and operated. Public benefit does not mean it is a charity or that every service is free."
+  },
+  "layout": {
+    "radius": "8px",
+    "radiusButton": "12px",
+    "radiusLarge": "16px",
+    "spacingBase": "8px",
+    "usage": "8px card baseline, 12px controls and 16px larger panels reflect sampled live usage. The 8px spacing base is a working guideline, not a claim that every live measurement uses it.",
+    "accessibility": "Keep text legible over gradients, maintain visible focus and pair status colours with explicit labels. Validate contrast and narrow-screen layouts in context."
+  },
+  "evidence": {
+    "reviewedOn": "2026-11-13",
+    "status": "Visual references combine existing brand assets and sampled public website usage. Editorial guidance is formalised here from that research, not presented as a previously approved policy.",
+    "sources": [
+      "https://haveibeenpwned.com/",
+      "https://haveibeenpwned.com/About",
+      "https://haveibeenpwned.com/Subscription",
+      "https://haveibeenpwned.com/Passwords",
+      "https://haveibeenpwned.com/FAQs",
+      "https://haveibeenpwned.com/Privacy",
+      "https://haveibeenpwned.com/Partners",
+      "https://www.ncsc.gov.uk/guidance/data-breaches",
+      "https://www.nist.gov/cybersecurity-and-privacy/how-do-i-create-good-password",
+      "https://www.justice.gov/usao-cdca/divisions/national-security-division/qakbot-resources",
+      "https://www.consumerreports.org/electronics/data-theft/how-to-use-have-i-been-pwned-data-breach-a6598286668/",
+      "https://www.abc.net.au/news/2023-09-23/cybersecurity-troy-hunt-have-i-been-pwned-fighting-data-breaches/102803748"
+    ]
+  }
+}

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Have I Been Pwned — Brand Guidelines</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,701,800&display=swap');
+
+  :root{
+    --background:#030304;
+    --surface:#131A20;
+    --border:#374A5A;
+    --muted:#6A8AA4;
+    --foreground:#F6F8FA;
+    --accent:#1D72A7;
+    --accent-text:#F6F8FA;
+    --accent-secondary:#152B39;
+    --radius:8px;
+    --radius-button:12px;
+    --radius-large:16px;
+    --space:8px;
+    --grey-100:#ECF1F4;
+    --grey-200:#D9E2E8;
+    --grey-300:#C1CFD9;
+    --grey-400:#9CB1C2;
+    --grey-500:#6A8AA4;
+    --grey-600:#4B667B;
+    --grey-700:#374A5A;
+    --grey-800:#1D282F;
+    --grey-900:#131A20;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#20262c;}
+  body{font-family:'Switzer',sans-serif;color:var(--foreground);}
+  .spread{
+    width:1440px;
+    height:900px;
+    margin:24px auto;
+    position:relative;
+    overflow:hidden;
+    background:var(--background);
+    display:flex;
+    flex-direction:column;
+  }
+  .spread.light{background:var(--foreground); color:var(--background);}
+  .spread.surface{background:var(--surface);}
+  .pad{padding:72px;}
+  .eyebrow{
+    font-size:14px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); font-weight:600; margin:0 0 16px;
+  }
+  .light .eyebrow{color:var(--accent);}
+  h1.spread-title{
+    font-size:64px; font-weight:700; font-style:italic; margin:0 0 8px; line-height:1.05;
+  }
+  h2.section-title{
+    font-size:40px; font-weight:700; margin:0 0 32px;
+  }
+  .rule{height:1px; background:var(--border); margin:24px 0 40px;}
+  .footer-row{
+    position:absolute; bottom:40px; left:72px; right:72px;
+    display:flex; justify-content:space-between; font-size:12px; color:var(--muted);
+    letter-spacing:.08em; text-transform:uppercase;
+  }
+  .grid{display:grid; gap:24px;}
+  .grid-2{grid-template-columns:1fr 1fr;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  .grid-7{grid-template-columns:repeat(7,1fr);}
+  p{font-size:16px; line-height:1.6; color:var(--grey-300); margin:0 0 16px;}
+  a{color:var(--grey-300); text-underline-offset:3px;}
+  h3{margin:0 0 12px; font-size:20px;}
+  .example-label{display:block; color:var(--grey-400); font-size:13px; margin-bottom:8px; text-transform:uppercase; letter-spacing:.06em;}
+  .atmosphere{background:radial-gradient(ellipse at 50% 70%,#152B39 0%,#030304 75%);}
+  .logo-asset{display:block; max-width:100%; height:auto;}
+  .form-sample{height:190px; display:flex; align-items:center; justify-content:center; background:var(--foreground); border-radius:8px; margin-bottom:24px; padding:24px;}
+  .merch-photo{display:block; width:100%; height:190px; object-fit:contain; background:#eee; border-radius:8px; margin-bottom:12px;}
+  .merch-caption{font-size:14px; margin:8px 0 0;}
+  .loading-example .logo-piece{
+    opacity:.3; transform-origin:50% center; transition:opacity .2s;
+    animation:hibp-pulse-fade 1.5s ease-in-out infinite;
+  }
+  .loading-example .logo-piece-1{animation-delay:0s;}
+  .loading-example .logo-piece-2{animation-delay:.3s;}
+  .loading-example .logo-piece-3{animation-delay:.6s;}
+  .loading-example .logo-piece-4{animation-delay:.9s;}
+  .loading-example .logo-piece-5{animation-delay:1.2s;}
+  @keyframes hibp-pulse-fade{
+    0%,100%{opacity:.3; fill:#F6F8FA;}
+    50%{opacity:1; fill:var(--accent);}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .loading-example .logo-piece{animation:none; transition:none; opacity:1; fill:#F6F8FA;}
+  }
+  .source-note{font-size:13px; color:var(--grey-400);}
+  .light p{color:#374A5A;}
+  ul{margin:0; padding:0; list-style:none;}
+  li{font-size:16px; line-height:1.6; color:var(--foreground); margin-bottom:12px; padding-left:28px; position:relative;}
+  li::before{content:"—"; position:absolute; left:0; color:var(--accent);}
+  .light li{color:var(--background);}
+  .swatch{border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);}
+  .swatch .fill{height:120px;}
+  .swatch .label{padding:12px 16px; background:var(--surface);}
+  .swatch .label .name{font-weight:600; font-size:15px; display:block;}
+  .swatch .label .hex{font-size:12px; color:var(--muted); font-family:monospace;}
+  .logo-symbol svg{display:block;}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px;}
+  .btn{
+    display:inline-block; padding:12px 24px; border-radius:var(--radius-button);
+    font-weight:600; font-size:15px; font-family:'Switzer',sans-serif;
+  }
+  .btn-primary{background:var(--accent); color:var(--accent-text); border:none;}
+  .btn-secondary{background:var(--accent-secondary); color:var(--foreground); border:1px solid var(--border);}
+  .btn-ghost{background:transparent; color:var(--foreground); border:1px solid var(--border);}
+  .input{
+    display:block; width:100%; padding:12px 16px; border-radius:var(--radius-large);
+    background:var(--foreground); color:#374A5A; border:2px solid transparent; font-size:15px;
+  }
+  .input.focus{border-color:var(--accent);}
+  .input.error{border-color:#B0244A;}
+  .input.disabled{background:var(--grey-600); color:var(--grey-300);}
+  .dont{position:relative;}
+  .dont::after{
+    content:"✕"; position:absolute; top:12px; right:12px; color:#D1495B; font-size:20px; font-weight:700;
+  }
+  .scale-row{display:flex; align-items:baseline; gap:24px; border-bottom:1px solid var(--border); padding:16px 0;}
+  .scale-row .tag{width:60px; font-size:14px; color:var(--muted); font-family:monospace;}
+  .scale-row .px{width:70px; font-size:14px; color:var(--muted); font-family:monospace;}
+  @page{size:1440px 900px; margin:0;}
+  @media print{
+    body{background:#fff;}
+    .spread{margin:0; break-after:page; print-color-adjust:exact; -webkit-print-color-adjust:exact;}
+    .spread:last-child{break-after:auto;}
+    .loading-example .logo-piece{animation:none; transition:none; opacity:1; fill:#F6F8FA;}
+  }
+</style>
+</head>
+<body>
+
+<!-- SPREAD 1: INTRODUCTION -->
+<section class="spread pad atmosphere">
+  <div style="margin-top:160px;">
+    <div class="eyebrow">Brand Guidelines — Edition 01</div>
+    <h1 style="margin:8px 0 16px;"><img class="logo-asset" src="assets/Hero.svg" width="537" height="177" alt="Have I Been Pwned" style="width:420px;"></h1>
+    <p style="font-size:20px; max-width:640px; margin-top:24px;">An independent, trusted guide to data-breach exposure. Approachable enough for anyone, credible enough for security professionals.</p>
+  </div>
+  <div class="footer-row">
+    <span>haveibeenpwned.com</span>
+    <span>Spread 01 / 18 — Introduction</span>
+  </div>
+</section>
+
+<!-- SPREAD 2: MANIFESTO / PRINCIPLES -->
+<section class="spread pad">
+  <div class="eyebrow">Introduction</div>
+  <h2 class="section-title">Why this brand exists</h2>
+  <div class="grid grid-2" style="margin-top:8px;">
+    <div>
+      <p style="font-size:18px; color:var(--foreground); line-height:1.7;">Have I Been Pwned helps people and organisations understand their exposure to data breaches and take informed action. It combines accessible public services with breach intelligence for the professionals protecting others.</p>
+      <p>The desired outcome is informed agency: help people understand what is known and what they can do, without fear or reassurance beyond the evidence.</p>
+      <p>HIBP is founder-led and personally accountable, supported by a visible team. Preserve that human credibility without describing the service as a one-person operation.</p>
+      <p class="source-note">Visual references come from existing brand assets and sampled live pages. Editorial standards are formalised in this edition; unvalidated numerical logo rules are not presented as established policy.</p>
+    </div>
+    <div class="grid" style="gap:16px;">
+      <div class="card"><strong>Public benefit at the core</strong><p style="margin:8px 0 0;">Free email checking, notifications and Pwned Passwords coexist with paid professional services.</p></div>
+      <div class="card"><strong>Transparent</strong><p style="margin:8px 0 0;">Sources, numbers and methodology are shown, not hidden.</p></div>
+      <div class="card"><strong>Pragmatic</strong><p style="margin:8px 0 0;">Matter-of-fact tone over alarmism, even when the news is bad.</p></div>
+      <div class="card"><strong>Credible</strong><p style="margin:8px 0 0;">Built on data and evidence, not marketing claims.</p></div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Mission &amp; principles</span>
+    <span>Spread 02 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 3: LOGO SYSTEM - OVERVIEW -->
+<section class="spread pad">
+  <div class="eyebrow">Logo System</div>
+  <h2 class="section-title">The symbol</h2>
+  <div class="grid grid-2" style="align-items:center;">
+    <div style="display:flex; align-items:center; justify-content:center; background:var(--surface); border-radius:var(--radius); height:420px;">
+      <svg width="220" height="149" viewBox="0 0 205.8 139.4" fill="#F6F8FA">
+        <path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/>
+        <path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/>
+        <path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/>
+        <path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/>
+        <path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/>
+      </svg>
+    </div>
+    <div>
+      <p style="color:var(--foreground); font-size:18px; line-height:1.7;">The logo's <strong>';--</strong> represents a component of a SQL injection attack, the vector by which many data breaches in HIBP were caused.</p>
+      <p>The distinctive mark comprises five angled bars. Preserve its geometry and spacing using the supplied artwork, rather than recreating it with punctuation or drawing a substitute.</p>
+      <ul style="margin-top:24px;">
+        <li>Preserve the supplied forward-leaning angle</li>
+        <li>Works as a single-colour mark in white, black or Pwned Blue</li>
+        <li>Use the standalone asset where a full wordmark is impractical; check legibility at the final size</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card loading-example" style="display:grid; grid-template-columns:200px 1fr; gap:24px; align-items:center; margin-top:24px;">
+    <div style="text-align:center;">
+      <span class="example-label">Live loading example</span>
+      <svg viewBox="0 0 400 271" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="54.2" aria-hidden="true">
+        <path class="logo-piece logo-piece-1" d="M387.941 162.208L400 99.9971H321.582L309.523 162.208H387.941Z" fill="#FFFFFF"/>
+        <path class="logo-piece logo-piece-2" d="M284.766 162.208L296.826 99.9971H218.408L206.349 162.208H284.766Z" fill="#FFFFFF"/>
+        <path class="logo-piece logo-piece-3" d="M160.475 270.998L176.746 187.029H98.3277L82.0571 270.998H160.475Z" fill="#FFFFFF"/>
+        <path class="logo-piece logo-piece-4" d="M78.4179 162.208L109.874 0.0765381H31.4565L0 162.208H78.4179Z" fill="#FFFFFF"/>
+        <path class="logo-piece logo-piece-5" d="M181.592 162.208L197.863 78.2393H119.445L103.174 162.208H181.592Z" fill="#FFFFFF"/>
+      </svg>
+      <div style="font-size:14px; margin-top:8px;">Checking for breaches...</div>
+    </div>
+    <div>
+      <h3>Motion means work is in progress</h3>
+      <p style="margin-bottom:8px;">Use the website's staggered pulse while loading data or processing a request, not as decoration or a percentage-complete indicator. Each bar fades from off-white to blue and back over 1.5 seconds, with 0.3-second offsets; the geometry stays fixed.</p>
+      <p style="margin:0; font-size:14px;">Pair it with a short status label and replace it with the result or error when work ends. This embedded example uses the <a href="https://haveibeenpwned.com/">homepage</a> SVG and animation recipe, with a static fallback for reduced motion and print.</p>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>The ;-- mark &amp; loading animation</span>
+    <span>Spread 03 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 4: LOGO FORMS -->
+<section class="spread pad">
+  <div class="eyebrow">Logo System</div>
+  <h2 class="section-title">Three forms, one identity</h2>
+  <p style="font-size:20px; margin-bottom:28px;">Choose the form for the available space, audience familiarity and how clearly the brand needs to introduce itself.</p>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="form-sample"><img class="logo-asset" src="assets/Icon.svg" width="130" alt="Icon only: the five-bar HIBP symbol"></div>
+      <h3>Icon only</h3>
+      <p>The most compact expression. Use for avatars, favicons, loading states and small placements where HIBP is already identified.</p>
+      <p style="margin:0;">On merchandise, it works as a discreet chest detail or a recognisable cap or visor emblem. It does not spell out the brand for a new audience.</p>
+    </div>
+    <div class="card">
+      <div class="form-sample"><img class="logo-asset" src="assets/IconPwned.svg" width="310" alt="Icon plus Pwned wordmark"></div>
+      <h3>Icon + Pwned</h3>
+      <p>A compact, readable wordmark for navigation, horizontal spaces and audiences who recognise the name.</p>
+      <p style="margin:0;">Use on tees, polos and caps, from small chest embroidery to a larger central statement. Keep the icon and lettering together as supplied.</p>
+    </div>
+    <div class="card">
+      <div class="form-sample"><img class="logo-asset" src="assets/IconHaveIBeenPwned.svg" width="310" alt="Icon plus full Have I Been Pwned name"></div>
+      <h3>Icon + Have I Been Pwned</h3>
+      <p>The full introduction. Use for covers, prominent brand introductions and audiences who may not know what the icon or "Pwned" refers to.</p>
+      <p style="margin:0;">The stacked form suits drinkware and taller spaces. It also appears as a small chest mark on the store's Classic Hoodie when the full name remains legible.</p>
+    </div>
+  </div>
+  <p class="source-note" style="margin-top:24px;">All three examples are complete SVGs from the repository's Logos folders, shown in their original black treatment. The website's gradient hero is a colour treatment of the full form, not a fourth form.</p>
+  <div class="footer-row"><span>Choosing a logo form</span><span>Spread 04 / 18</span></div>
+</section>
+
+<!-- SPREAD 5: LOGO SYSTEM - LOCKUPS, CLEAR SPACE, MIN SIZE, DONTS -->
+<section class="spread pad">
+  <div class="eyebrow">Logo System</div>
+  <h2 class="section-title">Lockups, clear space &amp; usage</h2>
+  <div class="grid grid-3" style="margin-bottom:32px;">
+    <div class="card" style="display:flex; flex-direction:column; justify-content:center; gap:16px; height:200px;">
+      <img class="logo-asset" src="assets/Hero.svg" width="537" height="177" alt="Have I Been Pwned hero lockup" style="width:270px;">
+      <span class="source-note">Hero: preserve the continuous blue gradient.</span>
+    </div>
+    <div class="card" style="display:flex; flex-direction:column; justify-content:center; gap:16px; height:200px;">
+      <img class="logo-asset" src="assets/HibpLogo.svg" width="800" height="150" alt="Pwned compact wordmark" style="width:250px;">
+      <span class="source-note">Compact: off-white navigation wordmark.</span>
+    </div>
+    <div class="card" style="height:200px;">
+      <h3>Use complete assets</h3>
+      <p style="margin:0;">Choose the hero, compact wordmark or standalone symbol for the space available. Preserve proportions and colours; do not combine separate pieces into a new lockup.</p>
+    </div>
+  </div>
+  <div class="grid grid-2">
+    <div>
+      <h3 style="font-size:18px; margin-bottom:12px;">Clear space &amp; minimum size</h3>
+      <p>Keep the mark visibly separate from nearby text, controls and imagery. Use the complete hero or compact asset; never assemble a lockup from separate pieces or retype it.</p>
+      <p>Check legibility at the final output size. Use the compact or standalone asset when space is limited. Numerical exclusion zones and screen/print minimums remain to be validated.</p>
+    </div>
+    <div>
+      <h3 style="font-size:18px; margin-bottom:12px;">Don't</h3>
+      <div class="grid grid-2" style="gap:12px;">
+        <div class="card dont" style="padding:16px; text-align:center;"><svg width="90" viewBox="0 0 205.8 139.4" fill="#F6F8FA" style="transform:skewX(-20deg)"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg><div style="font-size:12px; color:var(--muted); margin-top:8px;">Skew or stretch</div></div>
+        <div class="card dont" style="padding:16px; text-align:center;"><svg width="90" viewBox="0 0 205.8 139.4" fill="#D1495B"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg><div style="font-size:12px; color:var(--muted); margin-top:8px;">Arbitrary logo recolouring</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Lockups &amp; clear space</span>
+    <span>Spread 05 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 6: BRANDED WORDS & TITLES -->
+<section class="spread pad">
+  <div class="eyebrow">Brand Expression</div>
+  <h2 class="section-title">The visual language extends beyond the name</h2>
+  <p style="font-size:20px; margin-bottom:24px;">The icon can introduce other words in official HIBP artwork.
+    "Merch", "Domain Search" and "Breached Account API" share the identity without becoming replacement HIBP logos.</p>
+  <div class="grid grid-3">
+    <div class="card">
+      <img class="logo-asset" style="width:100%; height:190px; object-fit:contain; margin-bottom:20px;" src="assets/expressions/merch.svg" alt="Recreated example: HIBP icon followed by Merch in bold italic blue-gradient lettering">
+      <h3>A destination: Merch</h3>
+      <p style="margin:0;">Inspired by the <a href="https://merch.haveibeenpwned.com/en-aud">store banner</a>: the unchanged icon pairs with a short destination name.
+        The forward lean, blue gradient and dark atmospheric background make it recognisably HIBP.</p>
+    </div>
+    <div class="card">
+      <img class="logo-asset" style="width:100%; height:190px; object-fit:contain; margin-bottom:20px;" src="assets/expressions/domain-search.svg" alt="Recreated example: HIBP icon followed by Domain Search in bold italic blue-gradient lettering">
+      <h3>A feature: Domain Search</h3>
+      <p style="margin:0;">Inspired by the <a href="https://www.youtube.com/watch?v=oi_xcOEx5uI">demo title</a>: the same visual treatment introduces a feature.
+        The icon, lettering and gradient work together as one title composition.</p>
+    </div>
+    <div class="card">
+      <img class="logo-asset" style="width:100%; height:190px; object-fit:contain; margin-bottom:20px;" src="assets/expressions/breached-account-api.svg" alt="Recreated example: HIBP icon followed by Breached Account API in bold italic blue-gradient lettering">
+      <h3>A topic: Breached Account API</h3>
+      <p style="margin:0;">Inspired by the <a href="https://www.youtube.com/watch?v=qCcb9I_Uf5Y">API demo title</a>: the pattern extends to longer wording.
+        The layout accommodates the words without stretching the icon or condensing the lettering.</p>
+    </div>
+  </div>
+  <div class="grid grid-2" style="margin-top:24px;">
+    <div>
+      <h3>Carry the family resemblance</h3>
+      <p style="margin:0;">Pair the supplied icon with bold italic Switzer lettering, balancing scale, alignment and spacing.
+        Use a coherent pale-blue-to-Pwned-Blue gradient on a dark background.
+        Size or reflow long titles; never distort them.</p>
+    </div>
+    <div>
+      <h3>Keep identity and content distinct</h3>
+      <p style="margin:0;">Reserve this treatment for destination, feature and editorial titles, not every label.
+        Keep HIBP attribution clear and existing primary logos intact.
+        Title artwork does not rename the organisation or add a fourth primary form.</p>
+    </div>
+  </div>
+  <div class="footer-row"><span>Recreated examples · consistent scale &amp; canvas · 13 Nov 2026</span><span>Spread 06 / 18</span></div>
+</section>
+
+<!-- SPREAD 7: COLOUR SYSTEM - BRAND -->
+<section class="spread pad">
+  <div class="eyebrow">Colour System</div>
+  <h2 class="section-title">Brand colours</h2>
+  <div class="grid grid-2">
+    <div class="swatch">
+      <div class="fill" style="background:#1D72A7;"></div>
+      <div class="label"><span class="name">Pwned Blue — Accent</span><span class="hex">#1D72A7 · oklch(0.529 0.113 241.9)</span></div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#152B39;"></div>
+      <div class="label"><span class="name">Deep Navy — Accent Secondary</span><span class="hex">#152B39 · oklch(0.278 0.038 238.2)</span></div>
+    </div>
+  </div>
+  <p style="margin-top:24px;">Pwned Blue supports actions, links, data emphasis, borders and atmosphere. These may coexist: preserve a clear hierarchy rather than limiting blue to one use per screen. Deep Navy works in both secondary controls and backgrounds.</p>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>Hero gradient</h3>
+      <div style="height:64px; border-radius:8px; background:linear-gradient(15deg,#C8E5F8,#1D72A7); margin-bottom:12px;"></div>
+      <p style="margin:0;">Pale blue <strong>#C8E5F8</strong> to Pwned Blue <strong>#1D72A7</strong>. This strip illustrates the colours; preserve the SVG's exact gradient across both lines of the logo.</p>
+    </div>
+    <div class="card atmosphere">
+      <h3>Depth without distraction</h3>
+      <p>Use subtle blue glows and translucent gradient panels over the near-black foundation. Thin borders define groups without competing with the content.</p>
+      <p style="margin:0;">Check text contrast over the final gradient. Status colours must have explicit text labels, not carry meaning alone.</p>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Brand colour pair</span>
+    <span>Spread 07 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 8: COLOUR SYSTEM - GREYSCALE + ROLES -->
+<section class="spread pad">
+  <div class="eyebrow">Colour System</div>
+  <h2 class="section-title">Greyscale &amp; semantic roles</h2>
+  <div class="grid grid-7" style="margin-bottom:32px;">
+    <div class="swatch"><div class="fill" style="background:#F6F8FA; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">White</span><span class="hex">#F6F8FA</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#ECF1F4; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 100</span><span class="hex">#ECF1F4</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#D9E2E8; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 200</span><span class="hex">#D9E2E8</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#C1CFD9; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 300</span><span class="hex">#C1CFD9</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#9CB1C2; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 400</span><span class="hex">#9CB1C2</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#6A8AA4; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 500</span><span class="hex">#6A8AA4</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#4B667B; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 600</span><span class="hex">#4B667B</span></div></div>
+  </div>
+  <div class="grid grid-4" style="margin-bottom:32px;">
+    <div class="swatch"><div class="fill" style="background:#374A5A; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 700 — Border</span><span class="hex">#374A5A</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#1D282F; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 800</span><span class="hex">#1D282F</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#131A20; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 900 — Surface</span><span class="hex">#131A20</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#030304; height:80px; border:1px solid #374A5A;"></div><div class="label"><span class="name" style="font-size:13px;">Black — Background</span><span class="hex">#030304</span></div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card" style="background:#030304;">
+      <div style="font-size:13px; color:var(--muted); margin-bottom:8px;">BACKGROUND / FOREGROUND</div>
+      <div style="font-size:22px; font-weight:600;">Aa</div>
+    </div>
+    <div class="card" style="background:#1D72A7; color:#F6F8FA;">
+      <div style="font-size:13px; color:#DCEBF4; margin-bottom:8px;">ACCENT / ACCENT TEXT</div>
+      <div style="font-size:22px; font-weight:600;">Aa</div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Greyscale ramp &amp; pairings</span>
+    <span>Spread 08 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 9: TYPOGRAPHY - SPECIMEN -->
+<section class="spread pad light">
+  <div class="eyebrow">Typography</div>
+  <h2 class="section-title" style="color:#030304;">Switzer</h2>
+  <div style="font-size:140px; font-weight:700; font-style:italic; line-height:1; margin-bottom:16px;">Aa</div>
+  <p style="max-width:840px; font-size:18px;">Switzer is the primary brand typeface. Use bold upright for product headings, regular and medium for body copy and controls, and bold italic selectively for editorial display treatments. Always use the supplied SVG for a wordmark, never live text.</p>
+  <p style="max-width:840px;">Code samples use a system monospace fallback until a brand monospace is selected. The specimen demonstrates a style, not a requirement to italicise every heading.</p>
+  <div class="footer-row" style="color:#6A8AA4;">
+    <span>Switzer specimen</span>
+    <span>Spread 09 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 10: TYPOGRAPHY - SCALE -->
+<section class="spread pad">
+  <div class="eyebrow">Typography</div>
+  <h2 class="section-title">Type scale</h2>
+  <div class="grid grid-2" style="gap:64px;">
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Headings</h3>
+      <div class="scale-row"><span class="tag">h1</span><span class="px">40px</span><span style="font-size:40px; font-weight:700;">Heading 1</span></div>
+      <div class="scale-row"><span class="tag">h2</span><span class="px">32px</span><span style="font-size:32px; font-weight:700;">Heading 2</span></div>
+      <div class="scale-row"><span class="tag">h3</span><span class="px">28px</span><span style="font-size:28px; font-weight:700;">Heading 3</span></div>
+      <div class="scale-row"><span class="tag">h4</span><span class="px">24px</span><span style="font-size:24px; font-weight:700;">Heading 4</span></div>
+      <div class="scale-row"><span class="tag">h5</span><span class="px">20px</span><span style="font-size:20px; font-weight:700;">Heading 5</span></div>
+      <div class="scale-row"><span class="tag">h6</span><span class="px">16px</span><span style="font-size:16px; font-weight:700;">Heading 6</span></div>
+    </div>
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Display &amp; body</h3>
+      <div style="font-size:64px; font-weight:700; font-style:italic; margin-bottom:8px;">Display 1 <span style="font-size:16px;">64px</span></div>
+      <div style="font-size:48px; font-weight:700; font-style:italic; margin-bottom:8px;">Display 2 <span style="font-size:16px;">48px</span></div>
+      <div style="font-size:36px; font-weight:700; font-style:italic; margin-bottom:8px;">Display 3 <span style="font-size:16px;">36px</span></div>
+      <div style="font-size:28px; font-weight:700; font-style:italic; margin-bottom:24px;">Display 4 <span style="font-size:16px;">28px</span></div>
+      <p style="color:var(--foreground); font-size:18px;">18px is the reference lead size, not a fixed size for every page.</p>
+      <p>Body Medium runs at 16px for the majority of product and marketing copy, with Body Small at 14px for captions and fine print.</p>
+      <p>Adapt to the viewport. Keep statistical values together; use labelled abbreviations such as 17.9B when needed and retain access to the exact value. Never split a number across lines.</p>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Heading &amp; body scale</span>
+    <span>Spread 10 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 11: VOICE & TONE -->
+<section class="spread pad">
+  <div class="eyebrow">Voice &amp; Tone</div>
+  <h2 class="section-title">How HIBP sounds</h2>
+  <div class="grid grid-2">
+    <div>
+      <h3 style="font-size:18px; margin-bottom:16px;">We are</h3>
+      <ul>
+        <li>Direct and matter-of-fact</li>
+        <li>Pragmatic, evidence-based and credible</li>
+        <li>Quietly witty, never forced</li>
+        <li>Transparent about what data is and isn't shown</li>
+        <li>Human and commercially clear without pressure</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:18px; margin-bottom:16px;">We are not</h3>
+      <ul>
+        <li>Alarmist or fear-mongering</li>
+        <li>Bureaucratic or needlessly jargon-heavy</li>
+        <li>Preachy about security hygiene</li>
+        <li>Salesy or hype-driven</li>
+        <li>Vague about sources or methodology</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid grid-2" style="margin-top:16px;">
+    <div class="card"><strong>Use precisely</strong><p style="margin:8px 0 0;">Explain "pwned" when needed. Use "exposed" for a breach finding, "compromised" when supported, and "free" for the specific service that is free.</p></div>
+    <div class="card"><strong>Avoid assumptions</strong><p style="margin:8px 0 0;">Do not equate every finding with being "hacked". Prefer "affected person" outside legal contexts. Avoid unsupported superlatives and "guaranteed safe".</p></div>
+  </div>
+  <p style="margin-top:24px;">Understated humour belongs in the brand, not at an affected person's expense. Be direct about risk without blame, ridicule or pressure to buy.</p>
+  <div class="footer-row">
+    <span>Voice, tone &amp; vocabulary</span>
+    <span>Spread 11 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 12: APPLICATIONS - UI COMPONENTS -->
+<section class="spread pad">
+  <div class="eyebrow">Applications</div>
+  <h2 class="section-title">UI components</h2>
+  <div class="grid grid-2" style="gap:48px;">
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Buttons</h3>
+      <div style="display:flex; gap:16px; margin-bottom:16px;">
+        <button class="btn btn-primary">Check now</button>
+        <button class="btn btn-secondary">Learn more</button>
+        <button class="btn btn-ghost">Cancel</button>
+      </div>
+      <p>Make the main action clear within each task or section. Blue may also appear in navigation, links and other sections without competing equally for attention.</p>
+    </div>
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Inputs</h3>
+      <div class="grid" style="gap:12px;">
+        <label>Default<input class="input" placeholder="Email address"></label>
+        <label>Focus example<input class="input focus" value="name@example.com"></label>
+        <label>Error example<input class="input error" value="not-an-email" aria-invalid="true" aria-describedby="email-error"></label>
+        <span id="email-error" style="font-size:14px;">Enter a valid email address.</span>
+        <label>Disabled<input class="input disabled" value="Disabled" disabled></label>
+      </div>
+    </div>
+  </div>
+  <div class="card atmosphere" style="margin-top:24px; border-radius:var(--radius-large);">
+    <strong>Shape, contrast and state</strong>
+    <p style="margin:8px 0 0;">Sampled live usage includes 8px cards, 12px buttons and 16px larger panels and inputs. Keep focus visible, label errors explicitly and check contrast on the final background. These examples illustrate the brand, not a complete component library.</p>
+  </div>
+  <div class="footer-row">
+    <span>Buttons &amp; inputs</span>
+    <span>Spread 12 / 18</span>
+  </div>
+</section>
+
+<!-- SPREAD 13: MERCHANDISE: THREE FORMS -->
+<section class="spread pad">
+  <div class="eyebrow">Merchandise</div>
+  <h2 class="section-title">The three forms in use</h2>
+  <div class="grid grid-3" style="gap:32px;">
+    <div>
+      <h3>Icon only</h3>
+      <img class="merch-photo" src="assets/merch/icon-tee.webp" alt="Black tee with a small blue embroidered icon on the chest">
+      <p class="merch-caption"><a href="https://merch.haveibeenpwned.com/products/pwned-icon-tee-embroidered">Pwned Icon Blue Logo Tee</a>: small chest embroidery makes the mark a discreet detail.</p>
+      <img class="merch-photo" style="margin-top:20px;" src="assets/merch/icon-visor.webp" alt="White visor with the black standalone icon centred on the front">
+      <p class="merch-caption"><a href="https://merch.haveibeenpwned.com/products/pwn-shield-visor-4">Pwn Shield Visor</a>: the same icon becomes a centred emblem on a shallow surface.</p>
+    </div>
+    <div>
+      <h3>Icon + Pwned</h3>
+      <img class="merch-photo" src="assets/merch/pwned-tee.webp" alt="Black tee with a white icon and Pwned wordmark across the upper chest">
+      <p class="merch-caption"><a href="https://merch.haveibeenpwned.com/products/just-another-pwned-tee">Just Another Pwned Tee</a>: a prominent horizontal wordmark makes a clear statement.</p>
+      <img class="merch-photo" style="margin-top:20px;" src="assets/merch/pwned-hoodie.webp" alt="Black hoodie with a small blue icon and Pwned wordmark on the chest">
+      <p class="merch-caption"><a href="https://merch.haveibeenpwned.com/products/the-pwned-hoodie-embroidered-2">The Pwned Hoodie - Embroidered</a>: the compact form also works as a restrained chest detail.</p>
+    </div>
+    <div>
+      <h3>Icon + Have I Been Pwned</h3>
+      <img class="merch-photo" src="assets/merch/full-tumbler.webp" alt="White handled tumbler with the complete stacked Have I Been Pwned logo in black">
+      <p class="merch-caption"><a href="https://merch.haveibeenpwned.com/products/pwned-to-go">Pwned to Go</a>: the stacked full name fits a tall surface and introduces the brand.</p>
+      <img class="merch-photo" style="margin-top:20px;" src="assets/merch/full-hoodie.webp" alt="Dark HIBP Classic Hoodie with the complete stacked logo on the chest">
+      <p class="merch-caption"><a href="https://merch.haveibeenpwned.com/products/hibp-classic-hoodie">HIBP Classic Hoodie</a>: a full-name chest placement; check the lettering at production size.</p>
+    </div>
+  </div>
+  <div class="footer-row"><span>Official store examples · reviewed 13 Nov 2026</span><span>Spread 13 / 18</span></div>
+</section>
+
+<!-- SPREAD 14: MERCHANDISE: EXPRESSION -->
+<section class="spread pad">
+  <div class="eyebrow">Merchandise</div>
+  <h2 class="section-title">More expression, the same identity</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <img class="merch-photo" style="height:230px;" src="assets/merch/tonal-cap.webp" alt="Black Pwn Patrol Icon cap with tonal black embroidery">
+      <h3>Tone and material</h3>
+      <p><a href="https://merch.haveibeenpwned.com/products/pwn-patrol-icon-2">Pwn Patrol - Icon</a> uses black-on-black embroidery. Texture carries the mark without high colour contrast.</p>
+      <p style="margin:0;">This is a decorative merchandise treatment, not a model for interface labels or loading indicators. Check a physical sample for visibility and stitch detail.</p>
+    </div>
+    <div class="card">
+      <img class="merch-photo" style="height:230px;" src="assets/merch/repeat-towel.webp" alt="Breach Towel with rows of repeated black icon and Pwned wordmarks on white">
+      <h3>Pattern and placement</h3>
+      <p>The <a href="https://merch.haveibeenpwned.com/products/breach-towel">Breach Towel</a> repeats the compact wordmark as an all-over pattern. Individual marks retain their geometry.</p>
+      <p style="margin:0;">Repeat or orient whole marks for a deliberate product layout; do not distort their parts. Allow for seams, edges and curved surfaces rather than copying web spacing mechanically.</p>
+    </div>
+    <div class="card">
+      <img class="merch-photo" style="height:230px;" src="assets/merch/slogan-tee.webp" alt="Red tee with the white Oh No - Pwned slogan">
+      <h3>Colour and personality</h3>
+      <p>The <a href="https://merch.haveibeenpwned.com/products/oh-no-pwned-tee">Oh No - Pwned! Tee</a> shows a playful slogan on a red garment. Garment colours need not become interface palette colours.</p>
+      <p style="margin:0;">Slogan designs are merchandise artwork, not replacement primary logos. Keep playful self-expression separate from communications about someone's actual breach exposure.</p>
+    </div>
+  </div>
+  <p class="source-note" style="margin-top:24px;">Selected from all 42 listings and 83 catalogue images reviewed at <a href="https://merch.haveibeenpwned.com/en-usd/collections/all">the official store</a> on 13 November 2026, including sold-out listings. Product mockups illustrate placement and treatment, not exact ink or thread colours. Use source artwork and production proofs.</p>
+  <div class="footer-row"><span>Merchandise-specific treatments</span><span>Spread 14 / 18</span></div>
+</section>
+
+<!-- SPREAD 15: POSITIONING & AUDIENCES -->
+<section class="spread pad">
+  <div class="eyebrow">Positioning</div>
+  <h2 class="section-title">One brand, different needs</h2>
+  <p style="font-size:20px; max-width:1050px; margin-bottom:32px;">Accessible public services and professional breach intelligence share one promise: help people understand exposure and take informed action.</p>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>For individuals</h3>
+      <p>Lead with the task. Explain the finding in plain language and give proportionate next steps.</p>
+      <p>Clearly identify free email checking, notifications and Pwned Passwords. Do not imply every HIBP service is free.</p>
+      <span class="example-label">Example</span>
+      <p style="color:var(--foreground); margin:0;">Check if your email address is in a data breach.</p>
+    </div>
+    <div class="card">
+      <h3>For professionals</h3>
+      <p>Lead with coverage, integration, privacy controls and operational limits. Be precise, not bureaucratic.</p>
+      <p>Explain paid capabilities and plan boundaries without using breach findings to pressure a purchase.</p>
+      <span class="example-label">Example</span>
+      <p style="color:var(--foreground); margin:0;">Monitor domain exposure and integrate breach intelligence into your workflows.</p>
+    </div>
+    <div class="card">
+      <h3>For media &amp; partners</h3>
+      <p>Lead with attributable evidence, dated statistics and the exact scope of the relationship.</p>
+      <p>Show the people behind the service without repeating the outdated claim that one person runs everything.</p>
+      <span class="example-label">Example</span>
+      <p style="color:var(--foreground); margin:0;">Independently owned and operated, with public benefit at the core.</p>
+    </div>
+  </div>
+  <p style="margin-top:28px;"><strong style="color:var(--foreground);">Name consistently.</strong> Use Have I Been Pwned on first mention and HIBP thereafter. Retain Pwned Passwords as the service name. The compact logo is artwork, not a replacement spelling of the organisation's name.</p>
+  <div class="footer-row"><span>Positioning &amp; audience guidance</span><span>Spread 15 / 18</span></div>
+</section>
+
+<!-- SPREAD 16: BREACH COMMUNICATION -->
+<section class="spread pad">
+  <div class="eyebrow">Communication</div>
+  <h2 class="section-title">Explain exposure, not certainty</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>No match found</h3>
+      <p style="color:var(--foreground);">"This email address wasn't found in the breaches loaded into HIBP. That does not rule out exposure elsewhere."</p>
+      <p style="margin:0;">Do not say "Your account is safe" or imply complete coverage.</p>
+    </div>
+    <div class="card">
+      <h3>Exposure found</h3>
+      <p style="color:var(--foreground);">"Your email address appeared in this breach. Review the affected data and the recommended next steps."</p>
+      <p style="margin:0;">A historical finding does not automatically establish current account takeover.</p>
+    </div>
+    <div class="card">
+      <h3>New notification</h3>
+      <p>Separate the breach date from the date added to HIBP. Newly discovered or newly loaded data may be years old.</p>
+      <p style="margin:0;">State affected data classes and relevant next steps. Where passwords were exposed, advise changing affected or reused passwords.</p>
+    </div>
+    <div class="card">
+      <h3>Privacy reassurance</h3>
+      <p>Describe the safeguard for the specific feature. Pwned Passwords and email searches have different data flows.</p>
+      <p style="margin:0;">Do not claim every search is anonymous or nothing is ever logged. Use wording consistent with the current privacy policy and product documentation.</p>
+    </div>
+  </div>
+  <p style="margin-top:24px;"><strong style="color:var(--foreground);">Respect the person.</strong> Avoid blame and jokes about exposure. Use synthetic examples in demonstrations, and never expose a person's sensitive breach history in brand materials.</p>
+  <div class="footer-row"><span>Results, notifications &amp; reassurance</span><span>Spread 16 / 18</span></div>
+</section>
+
+<!-- SPREAD 17: CREDIBILITY & COMMERCIAL COMMUNICATION -->
+<section class="spread pad">
+  <div class="eyebrow">Trust</div>
+  <h2 class="section-title">Show why people can trust HIBP</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>Be specific about relationships</h3>
+      <p>Distinguish recommendations, integrations, data contributions and customer relationships. None automatically implies certification or blanket endorsement.</p>
+      <p style="margin:0;">Prefer a sourced statement such as "Referenced in NCSC guidance" to an unsupported claim of government approval.</p>
+    </div>
+    <div class="card">
+      <h3>Make numbers accountable</h3>
+      <p>Label what is counted, cite the source and include an as-of date in published materials. Addresses and records are not the same as unique people.</p>
+      <p style="margin:0;">Refresh statistics before publication. Distinguish verified findings, allegations and uncertainty.</p>
+    </div>
+    <div class="card">
+      <h3>Separate sponsorship from findings</h3>
+      <p>Label sponsored content where it appears and keep it visually distinct from breach results. Explain commercial benefits without fear-based selling.</p>
+      <p style="margin:0;">A partner's protection claim is not an HIBP capability. Public benefit does not mean HIBP is a charity or that every service is free.</p>
+    </div>
+    <div class="card">
+      <h3>Keep the human accountability</h3>
+      <p>Describe HIBP as independently owned and operated, founder-led and supported by a team. Explain methodology rather than relying on personality alone.</p>
+      <p style="margin:0;">Use the current About page for team descriptions. Avoid "one person running everything".</p>
+    </div>
+  </div>
+  <p class="source-note" style="margin-top:24px;">Research basis, reviewed 13 November 2026:
+    <a href="https://www.ncsc.gov.uk/guidance/data-breaches">NCSC guidance</a>,
+    <a href="https://www.nist.gov/cybersecurity-and-privacy/how-do-i-create-good-password">NIST guidance</a>,
+    <a href="https://www.justice.gov/usao-cdca/divisions/national-security-division/qakbot-resources">DOJ Qakbot resources</a>,
+    <a href="https://www.consumerreports.org/electronics/data-theft/how-to-use-have-i-been-pwned-data-breach-a6598286668/">Consumer Reports (2022)</a>
+    and <a href="https://www.abc.net.au/news/2023-09-23/cybersecurity-troy-hunt-have-i-been-pwned-fighting-data-breaches/102803748">ABC (2023)</a>.
+    Historical reporting informs reputation, not current product or staffing claims. Full source list: brand.json.</p>
+  <div class="footer-row"><span>Evidence, attribution &amp; sponsorship</span><span>Spread 17 / 18</span></div>
+</section>
+
+<!-- SPREAD 18: CLOSING -->
+<section class="spread pad surface">
+  <div style="margin-top:220px; text-align:center;">
+    <div class="logo-symbol" style="display:flex; justify-content:center; margin-bottom:32px;">
+      <svg width="90" viewBox="0 0 205.8 139.4" fill="#1D72A7"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg>
+    </div>
+    <h2 style="font-size:32px; font-style:italic; font-weight:700; margin:0 0 12px;">Clarity. Credibility. Informed action.</h2>
+    <p style="max-width:560px; margin:0 auto;">Questions about using the HIBP brand? Visit the support portal at <a href="https://support.haveibeenpwned.com">support.haveibeenpwned.com</a>.</p>
+  </div>
+  <div class="footer-row">
+    <span>github.com/HaveIBeenPwned/Branding</span>
+    <span>Spread 18 / 18 — Closing</span>
+  </div>
+</section>
+
+</body>
+</html>

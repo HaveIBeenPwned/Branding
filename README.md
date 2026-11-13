@@ -3,8 +3,11 @@ A collection of branded assets to be used freely by anyone who needs them 🙂 T
 
 The assets are broken down into the following folders:
 
-## [Logos and Icons](https://github.com/HaveIBeenPwned/Branding/tree/main/Logos)
-These are the fundamental basic logos in various formats, colours and styles. They include the stylised version of ';-- which is typically used as a simple representation of the brand. It's on social channels, the favicon of the website etc. Every other version of the logo we have is in there in one form or another.
+## [Brand Guidelines](Brand%20Guidelines)
+A formal brand book covering colour, typography, logo usage and voice & tone, along with reusable design tokens (`tokens.css` / `tokens.json`) derived from a single `brand.json` source of truth.
+
+## [Icons](Icons)
+It's just the stylised version of ';-- which is typically used as a simple representation of the brand. It's on social channels, the favicon of the website etc.
 
 ## [Merch](https://github.com/HaveIBeenPwned/Branding/tree/main/Merch)
 This is *real* stuff - things you can actually hold in your hands! It includes:
