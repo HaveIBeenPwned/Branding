@@ -1,7 +1,6 @@
 /*
  * Have I Been Pwned - design tokens
- * Generated from brand.json. Do not hand-edit colour values here;
- * update brand.json and regenerate instead.
+ * Kept in sync with brand.json; update that source first.
  */
 
 :root {
@@ -49,5 +48,7 @@
 
   /* Layout */
   --hibp-radius: 8px;
+  --hibp-radius-button: 12px;
+  --hibp-radius-large: 16px;
   --hibp-spacing-base: 8px;
 }
