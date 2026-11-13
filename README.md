@@ -3,6 +3,9 @@ A collection of branded assets to be used freely by anyone who needs them 🙂 T
 
 The assets are broken down into the following folders:
 
+## [Brand Guidelines](Brand%20Guidelines)
+A formal brand book covering colour, typography, logo usage and voice & tone, along with reusable design tokens (`tokens.css` / `tokens.json`) derived from a single `brand.json` source of truth.
+
 ## [Icons](Icons)
 It's just the stylised version of ';-- which is typically used as a simple representation of the brand. It's on social channels, the favicon of the website etc.
 

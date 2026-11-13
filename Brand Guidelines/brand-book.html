@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Have I Been Pwned — Brand Guidelines</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,701,800&display=swap');
+
+  :root{
+    --background:#030304;
+    --surface:#131A20;
+    --border:#374A5A;
+    --muted:#6A8AA4;
+    --foreground:#F6F8FA;
+    --accent:#1D72A7;
+    --accent-text:#F6F8FA;
+    --accent-secondary:#152B39;
+    --radius:8px;
+    --space:8px;
+    --grey-100:#ECF1F4;
+    --grey-200:#D9E2E8;
+    --grey-300:#C1CFD9;
+    --grey-400:#9CB1C2;
+    --grey-500:#6A8AA4;
+    --grey-600:#4B667B;
+    --grey-700:#374A5A;
+    --grey-800:#1D282F;
+    --grey-900:#131A20;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#20262c;}
+  body{font-family:'Switzer',sans-serif;color:var(--foreground);}
+  .spread{
+    width:1440px;
+    height:900px;
+    margin:24px auto;
+    position:relative;
+    overflow:hidden;
+    background:var(--background);
+    display:flex;
+    flex-direction:column;
+  }
+  .spread.light{background:var(--foreground); color:var(--background);}
+  .spread.surface{background:var(--surface);}
+  .pad{padding:72px;}
+  .eyebrow{
+    font-size:14px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); font-weight:600; margin:0 0 16px;
+  }
+  .light .eyebrow{color:var(--accent);}
+  h1.spread-title{
+    font-size:64px; font-weight:700; font-style:italic; margin:0 0 8px; line-height:1.05;
+  }
+  h2.section-title{
+    font-size:40px; font-weight:700; font-style:italic; margin:0 0 32px;
+  }
+  .rule{height:1px; background:var(--border); margin:24px 0 40px;}
+  .footer-row{
+    position:absolute; bottom:40px; left:72px; right:72px;
+    display:flex; justify-content:space-between; font-size:12px; color:var(--muted);
+    letter-spacing:.08em; text-transform:uppercase;
+  }
+  .grid{display:grid; gap:24px;}
+  .grid-2{grid-template-columns:1fr 1fr;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  .grid-7{grid-template-columns:repeat(7,1fr);}
+  p{font-size:16px; line-height:1.6; color:var(--muted); margin:0 0 16px;}
+  .light p{color:#374A5A;}
+  ul{margin:0; padding:0; list-style:none;}
+  li{font-size:16px; line-height:1.6; color:var(--foreground); margin-bottom:12px; padding-left:28px; position:relative;}
+  li::before{content:"—"; position:absolute; left:0; color:var(--accent);}
+  .light li{color:var(--background);}
+  .swatch{border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);}
+  .swatch .fill{height:120px;}
+  .swatch .label{padding:12px 16px; background:var(--surface);}
+  .swatch .label .name{font-weight:600; font-size:15px; display:block;}
+  .swatch .label .hex{font-size:12px; color:var(--muted); font-family:monospace;}
+  .logo-symbol svg{display:block;}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px;}
+  .btn{
+    display:inline-block; padding:12px 24px; border-radius:var(--radius);
+    font-weight:600; font-size:15px; font-family:'Switzer',sans-serif;
+  }
+  .btn-primary{background:var(--accent); color:var(--accent-text); border:none;}
+  .btn-secondary{background:var(--surface); color:var(--foreground); border:1px solid var(--border);}
+  .btn-ghost{background:transparent; color:var(--foreground); border:1px solid var(--border);}
+  .input{
+    display:block; width:100%; padding:12px 16px; border-radius:var(--radius);
+    background:var(--grey-100); color:#374A5A; border:2px solid transparent; font-size:15px;
+  }
+  .input.focus{border-color:var(--accent);}
+  .input.error{border-color:#B0244A;}
+  .input.disabled{background:var(--grey-600); color:var(--grey-300);}
+  .dont{position:relative;}
+  .dont::after{
+    content:"✕"; position:absolute; top:12px; right:12px; color:#D1495B; font-size:20px; font-weight:700;
+  }
+  .scale-row{display:flex; align-items:baseline; gap:24px; border-bottom:1px solid var(--border); padding:16px 0;}
+  .scale-row .tag{width:60px; font-size:14px; color:var(--muted); font-family:monospace;}
+  .scale-row .px{width:70px; font-size:14px; color:var(--muted); font-family:monospace;}
+  @media print{
+    body{background:#fff;}
+    .spread{margin:0; page-break-after:always; width:100%; height:100vh;}
+  }
+</style>
+</head>
+<body>
+
+<!-- SPREAD 1: INTRODUCTION -->
+<section class="spread pad">
+  <div style="margin-top:160px;">
+    <div class="eyebrow">Brand Guidelines — Edition 01</div>
+    <svg width="537" height="177" viewBox="0 0 537 177" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:420px; height:auto; margin:8px 0 16px;"><path fill="url(#hero-a)" d="M0 71 13.728.28h16.64L24.96 28.048h27.872L58.24.28h16.64L61.152 71h-16.64l5.72-29.432H22.36L16.64 71z"/><path fill="url(#hero-b)" d="M92.036 33.56H76.124c3.536-13.312 14.248-20.28 28.808-20.28 14.872 0 21.84 7.696 21.84 17.888 0 1.664-.208 3.224-.52 4.992l-4.056 20.904c-1.04 5.408-1.352 8.632-1.352 11.128 0 1.144.104 1.976.208 2.808H104.62c-.104-.416-.104-.936-.104-1.56 0-1.144.104-2.6.312-4.264-5.408 5.2-11.96 7.488-17.992 7.488-9.776 0-16.952-5.096-16.952-14.872 0-7.696 5.096-14.352 14.664-17.576 8.528-2.808 14.352-3.328 25.688-3.432l.208-1.248c.208-1.04.312-1.976.312-2.912 0-4.264-2.6-6.448-8.008-6.448-5.512 0-9.152 3.016-10.712 7.384m-5.72 22.568c0 3.744 2.392 5.512 6.448 5.512 7.176 0 13.728-5.72 15.184-13.416l.416-2.184c-17.16.312-22.048 4.472-22.048 10.088"/><path fill="url(#hero-c)" d="m139.517 71-8.84-55.952h16.744l4.16 37.024.208 6.448 2.6-6.448 18.616-37.024h16.848L159.173 71z"/><path fill="url(#hero-d)" d="M236.908 52.592c-5.096 13.312-17.264 20.072-29.848 20.072-14.976 0-24.232-8.528-24.232-23.192 0-19.24 13.416-36.192 32.968-36.192 14.768 0 23.088 8.944 23.088 22.776 0 2.288-.208 4.784-.624 7.28l-.52 2.912h-38.48c-.104.936-.104 1.768-.104 2.704 0 7.384 3.12 11.024 9.152 11.024 5.304 0 9.672-2.184 11.96-7.384zM214.34 25.968c-5.928 0-10.504 4.68-13 11.128h21.736v-.728c0-6.76-3.016-10.4-8.736-10.4"/><path fill="url(#hero-e)" d="M255.877 71 269.605.28h16.64L272.517 71z"/><path fill="url(#hero-f)" d="M298.59 71 312.318.28h28.704c13.728 0 22.36 6.344 22.36 17.472 0 6.552-3.536 12.688-10.4 15.912 5.72 2.496 8.632 7.28 8.632 13.416 0 13.416-11.024 23.92-30.784 23.92zm39.52-57.512h-11.752l-3.016 15.496h11.336c7.592 0 11.128-4.264 11.128-9.464 0-3.744-2.6-6.032-7.696-6.032m-2.392 27.56h-14.664l-3.224 16.744h15.08c7.696 0 11.544-4.784 11.544-10.192 0-3.952-3.016-6.552-8.736-6.552"/><path fill="url(#hero-g)" d="M418.847 52.592c-5.096 13.312-17.264 20.072-29.848 20.072-14.976 0-24.232-8.528-24.232-23.192 0-19.24 13.416-36.192 32.968-36.192 14.768 0 23.088 8.944 23.088 22.776 0 2.288-.208 4.784-.624 7.28l-.52 2.912h-38.48c-.104.936-.104 1.768-.104 2.704 0 7.384 3.12 11.024 9.152 11.024 5.304 0 9.672-2.184 11.96-7.384zm-22.568-26.624c-5.928 0-10.504 4.68-13 11.128h21.736v-.728c0-6.76-3.016-10.4-8.736-10.4"/><path fill="url(#hero-h)" d="M476.766 52.592c-5.096 13.312-17.264 20.072-29.848 20.072-14.976 0-24.232-8.528-24.232-23.192 0-19.24 13.416-36.192 32.968-36.192 14.768 0 23.088 8.944 23.088 22.776 0 2.288-.208 4.784-.624 7.28l-.52 2.912h-38.48c-.104.936-.104 1.768-.104 2.704 0 7.384 3.12 11.024 9.152 11.024 5.304 0 9.672-2.184 11.96-7.384zm-22.568-26.624c-5.928 0-10.504 4.68-13 11.128h21.736v-.728c0-6.76-3.016-10.4-8.736-10.4"/><path fill="url(#hero-i)" d="m478.317 71 10.816-55.952h15.912l-1.04 5.512c4.472-4.888 10.088-7.28 16.432-7.28 9.672 0 16.224 5.72 16.224 16.432 0 1.976-.208 4.056-.624 6.344L529.173 71h-15.912l6.656-34.112c.312-1.352.416-2.6.416-3.64 0-4.68-2.288-7.072-7.072-7.072-5.928 0-10.712 4.784-12.48 11.232L494.229 71z"/><path fill="url(#hero-j)" d="m143.271 175.116 13.746-70.846h16.663l-13.746 70.846zm32.607-23.136h-6.188l2.606-13.23h4.939c3.121 0 5.726-.584 7.816-1.778 2.09-1.181 3.664-2.755 4.736-4.736s1.614-4.22 1.614-6.717-.8-4.464-2.401-5.889c-1.602-1.425-3.99-2.13-7.192-2.13h-15.103l2.497-13.23h15.103c7.504 0 13.461 1.777 17.871 5.319s6.621 8.576 6.621 15.103c0 5.007-1.302 9.552-3.908 13.65s-6.377 7.396-11.303 9.893q-7.389 3.745-17.708 3.745"/><path fill="url(#hero-k)" d="m255.044 175.117-2.09-35.01.313-8.752h.732l-3.229 8.752-15.727 35.01h-20.422l-3.433-56.042h16.975l.204 37.085-.109 9.377h-.828l3.854-9.377 16.975-37.085h16.148l2.497 37.085.108 9.377h-.936l3.433-9.377 14.791-37.085h16.351l-25.321 56.042h-20.313z"/><path fill="url(#hero-l)" d="m293.067 175.116 10.829-56.042h15.944l-10.829 56.042zm22.091-32.201h-5.319c1.52-5.834 3.528-10.638 5.984-14.424 2.47-3.786 5.346-6.595 8.644-8.44 3.297-1.846 6.893-2.755 10.787-2.755 3.271 0 6.107.625 8.549 1.873 2.429 1.248 4.329 3.094 5.672 5.523 1.357 2.429 2.036 5.455 2.036 9.064 0 .977-.055 1.995-.163 3.067a36 36 0 0 1-.475 3.284l-6.88 35.009h-15.944l6.663-34.168c.135-.692.244-1.33.312-1.927.068-.583.108-1.167.108-1.723 0-2.361-.57-4.125-1.723-5.32-1.14-1.18-2.931-1.777-5.36-1.777-1.533 0-2.999.312-4.424.936a12.3 12.3 0 0 0-3.853 2.66 15 15 0 0 0-2.863 4.057 24 24 0 0 0-1.778 5.048z"/><path fill="url(#hero-m)" d="m403.805 141.151-10.204 5.835c.204-1.248.38-2.415.516-3.487.135-1.072.203-2.103.203-3.08 0-3.406-.746-5.984-2.239-7.762s-3.664-2.66-6.513-2.66c-2.293 0-4.37.638-6.256 1.927-1.872 1.289-3.487 3.04-4.844 5.265-1.357 2.226-2.375 4.709-3.08 7.45a34.1 34.1 0 0 0-1.045 8.386c0 3.677.76 6.445 2.293 8.277 1.534 1.845 3.813 2.755 6.88 2.755 2.632 0 5.007-.57 7.083-1.724 2.09-1.14 3.718-3.039 4.899-5.672h16.663c-1.737 4.451-4.152 8.156-7.246 11.141s-6.581 5.224-10.476 6.717a33.8 33.8 0 0 1-12.185 2.239c-7.504 0-13.42-2.036-17.762-6.093q-6.514-6.086-6.514-17.138c0-4.79.787-9.363 2.348-13.705s3.813-8.21 6.771-11.616a32 32 0 0 1 10.516-8.019c4.057-1.941 8.522-2.918 13.393-2.918 7.355 0 13.054 2.063 17.084 6.201 4.03 4.139 6.039 9.676 6.039 16.623q0 1.669-.163 3.542a44 44 0 0 1-.475 3.745l-.516 2.917h-48.334l1.669-9.173h41.468z"/><path fill="url(#hero-n)" d="M430.482 176.771c-3.827 0-7.138-.909-9.947-2.714s-4.966-4.369-6.459-7.707-2.239-7.219-2.239-11.67c0-4.925.733-9.634 2.185-14.112 1.466-4.478 3.528-8.467 6.201-11.982 2.673-3.501 5.849-6.269 9.526-8.277s7.748-3.026 12.185-3.026c5.279 0 9.309 1.818 12.091 5.468s4.166 8.766 4.166 15.361c0 5.346-.747 10.367-2.239 15.048-1.493 4.682-3.556 8.807-6.202 12.349s-5.604 6.296-8.901 8.277c-3.298 1.981-6.758 2.972-10.367 2.972zm5.835-12.918c2.293 0 4.355-.746 6.201-2.239q2.768-2.238 4.681-5.78c1.289-2.361 2.239-4.913 2.863-7.654s.937-5.359.937-7.87c0-3.27-.679-5.767-2.036-7.504q-2.035-2.605-5.984-2.605-3.135 0-5.78 2.035c-1.764 1.357-3.311 3.148-4.641 5.36-1.316 2.226-2.348 4.736-3.067 7.558a34 34 0 0 0-1.099 8.59c0 3.27.665 5.767 1.981 7.504q1.974 2.605 5.944 2.605m8.643 11.263 14.587-75.012h15.945l-14.588 75.012z"/><path fill="url(#hero-o)" d="m142.502 151.983 2.565-13.23H128.39l-2.565 13.23z"/><path fill="url(#hero-p)" d="m120.56 151.983 2.565-13.23h-16.677l-2.564 13.23z"/><path fill="url(#hero-q)" d="m94.124 175.119 3.46-17.858H80.907l-3.46 17.858z"/><path fill="url(#hero-r)" d="m76.677 151.983 6.69-34.48H66.69L60 151.983z"/><path fill="url(#hero-s)" d="m98.619 151.982 3.46-17.857H85.402l-3.46 17.857z"/><defs><linearGradient id="hero-a" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-b" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-c" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-d" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-e" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-f" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-g" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-h" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-i" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-j" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-k" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-l" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-m" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-n" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-o" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-p" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-q" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-r" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient><linearGradient id="hero-s" x1="457" x2="80" y1="158" y2="55.5" gradientUnits="userSpaceOnUse"><stop stop-color="#1d72a7"/><stop offset="1" stop-color="#c8e5f8"/></linearGradient></defs></svg>
+    <p style="font-size:20px; max-width:640px; margin-top:24px;">Free data breach checking for everyone. A direct, evidence-based brand built around one colour, one typeface, and a single unmistakable mark.</p>
+  </div>
+  <div class="footer-row">
+    <span>haveibeenpwned.com</span>
+    <span>Spread 01 / 11 — Introduction</span>
+  </div>
+</section>
+
+<!-- SPREAD 2: MANIFESTO / PRINCIPLES -->
+<section class="spread pad">
+  <div class="eyebrow">Introduction</div>
+  <h2 class="section-title">Why this brand exists</h2>
+  <div class="grid grid-2" style="margin-top:8px;">
+    <div>
+      <p style="font-size:18px; color:var(--foreground); line-height:1.7;">Have I Been Pwned was built so that anyone — not just security professionals — could find out if their personal data has been exposed in a data breach, for free. The brand has to carry that same ethos: no fear-mongering, no paywalls dressed up as "free", no corporate gloss. Just facts, delivered plainly.</p>
+      <p>Every design decision in this book is measured from the live product and the existing Figma source file, not invented. Where something hasn't been formalised yet, it's called out explicitly rather than guessed.</p>
+    </div>
+    <div class="grid" style="gap:16px;">
+      <div class="card"><strong>Free, always</strong><p style="margin:8px 0 0;">The core checking service carries no cost and no dark patterns.</p></div>
+      <div class="card"><strong>Transparent</strong><p style="margin:8px 0 0;">Sources, numbers and methodology are shown, not hidden.</p></div>
+      <div class="card"><strong>Pragmatic</strong><p style="margin:8px 0 0;">Matter-of-fact tone over alarmism, even when the news is bad.</p></div>
+      <div class="card"><strong>Credible</strong><p style="margin:8px 0 0;">Built on data and evidence, not marketing claims.</p></div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Mission &amp; principles</span>
+    <span>Spread 02 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 3: LOGO SYSTEM - OVERVIEW -->
+<section class="spread pad">
+  <div class="eyebrow">Logo System</div>
+  <h2 class="section-title">The symbol</h2>
+  <div class="grid grid-2" style="align-items:center;">
+    <div style="display:flex; align-items:center; justify-content:center; background:var(--surface); border-radius:var(--radius); height:420px;">
+      <svg width="220" height="149" viewBox="0 0 205.8 139.4" fill="#F6F8FA">
+        <path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/>
+        <path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/>
+        <path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/>
+        <path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/>
+        <path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/>
+      </svg>
+    </div>
+    <div>
+      <p style="color:var(--foreground); font-size:18px; line-height:1.7;">The mark is a stylised rendering of <strong>;--</strong> — the syntax you'd use to break out of a SQL query in an injection attack. Five angled bars at a forward lean give it motion and an unmistakable silhouette at any size, from a 16px favicon to a wall print.</p>
+      <ul style="margin-top:24px;">
+        <li>Always set at the same forward-leaning angle — never upright</li>
+        <li>Works as a single-colour mark in white, black or Pwned Blue</li>
+        <li>Used alone as the favicon, social avatar and app icon</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>The ;-- mark</span>
+    <span>Spread 03 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 4: LOGO SYSTEM - LOCKUPS, CLEAR SPACE, MIN SIZE, DONTS -->
+<section class="spread pad">
+  <div class="eyebrow">Logo System</div>
+  <h2 class="section-title">Lockups, clear space &amp; usage</h2>
+  <div class="grid grid-3" style="margin-bottom:32px;">
+    <div class="card" style="display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:10px; height:160px;">
+      <svg width="190" viewBox="0 0 1281.6 421.5" fill="#F6F8FA"><path d="M0,168.9L32.8,0h39.7l-12.9,66.3h66.6L139.1,0h39.7l-32.8,168.9h-39.7l13.7-70.3H53.4l-13.7,70.3H0Z"/><path d="M219.8,79.5h-38c8.4-31.8,34-48.4,68.8-48.4s52.2,18.4,52.2,42.7-.5,7.7-1.2,11.9l-9.7,49.9c-2.5,12.9-3.2,20.6-3.2,26.6s.2,4.7.5,6.7h-39.2c-.2-1-.2-2.2-.2-3.7,0-2.7.2-6.2.7-10.2-12.9,12.4-28.6,17.9-43,17.9-23.3,0-40.5-12.2-40.5-35.5s12.2-34.3,35-42c20.4-6.7,34.3-7.9,61.3-8.2l.5-3c.5-2.5.7-4.7.7-7,0-10.2-6.2-15.4-19.1-15.4s-21.9,7.2-25.6,17.6ZM206.1,133.4c0,8.9,5.7,13.2,15.4,13.2,17.1,0,32.8-13.7,36.3-32l1-5.2c-41,.7-52.7,10.7-52.7,24.1Z"/><path d="M333.2,168.9l-21.1-133.6h40l9.9,88.4.5,15.4,6.2-15.4,44.5-88.4h40.2l-73.3,133.6h-46.9Z"/><path d="M565.8,124.9c-12.2,31.8-41.2,47.9-71.3,47.9s-57.9-20.4-57.9-55.4,32-86.4,78.7-86.4,55.1,21.4,55.1,54.4-.5,11.4-1.5,17.4l-1.2,7h-91.9c-.2,2.2-.2,4.2-.2,6.5,0,17.6,7.5,26.3,21.9,26.3s23.1-5.2,28.6-17.6h39.7ZM511.9,61.3c-14.2,0-25.1,11.2-31,26.6h51.9v-1.7c0-16.1-7.2-24.8-20.9-24.8Z"/><path d="M611.1,168.9L643.9,0h39.7l-32.8,168.9h-39.7Z"/><path d="M713.1,168.9L745.9,0h68.5c32.8,0,53.4,15.2,53.4,41.7s-8.4,30.3-24.8,38c13.7,6,20.6,17.4,20.6,32,0,32-26.3,57.1-73.5,57.1h-77ZM807.5,31.5h-28.1l-7.2,37h27.1c18.1,0,26.6-10.2,26.6-22.6s-6.2-14.4-18.4-14.4ZM801.7,97.4h-35l-7.7,40h36c18.4,0,27.6-11.4,27.6-24.3s-7.2-15.6-20.9-15.6Z"/><path d="M1000.3,124.9c-12.2,31.8-41.2,47.9-71.3,47.9s-57.9-20.4-57.9-55.4,32-86.4,78.7-86.4,55.1,21.4,55.1,54.4-.5,11.4-1.5,17.4l-1.2,7h-91.9c-.2,2.2-.2,4.2-.2,6.5,0,17.6,7.5,26.3,21.9,26.3s23.1-5.2,28.6-17.6h39.7ZM946.4,61.3c-14.2,0-25.1,11.2-31,26.6h51.9v-1.7c0-16.1-7.2-24.8-20.9-24.8Z"/><path d="M1138.6,124.9c-12.2,31.8-41.2,47.9-71.3,47.9s-57.9-20.4-57.9-55.4,32-86.4,78.7-86.4,55.1,21.4,55.1,54.4-.5,11.4-1.5,17.4l-1.2,7h-91.9c-.2,2.2-.2,4.2-.2,6.5,0,17.6,7.5,26.3,21.9,26.3s23.1-5.2,28.6-17.6h39.7ZM1084.7,61.3c-14.2,0-25.1,11.2-31,26.6h51.9v-1.7c0-16.1-7.2-24.8-20.9-24.8Z"/><path d="M1142.3,168.9l25.8-133.6h38l-2.5,13.2c10.7-11.7,24.1-17.4,39.2-17.4,23.1,0,38.7,13.7,38.7,39.2s-.5,9.7-1.5,15.2l-16.4,83.5h-38l15.9-81.5c.7-3.2,1-6.2,1-8.7,0-11.2-5.5-16.9-16.9-16.9s-25.6,11.4-29.8,26.8l-15.6,80.2h-38Z"/></svg>
+      <svg width="190" viewBox="0 0 995.4 185.5" fill="#1D72A7"><path d="M201.5,181.5L234.7,10.1h40.3l-33.3,171.4h-40.3ZM280.4,125.5h-15l6.3-32h11.9c7.6,0,13.9-1.4,18.9-4.3,5.1-2.9,8.9-6.7,11.5-11.5,2.6-4.8,3.9-10.2,3.9-16.3s-1.9-10.8-5.8-14.2c-3.9-3.4-9.7-5.2-17.4-5.2h-36.5l6-32h36.5c18.2,0,32.6,4.3,43.2,12.9,10.7,8.6,16,20.7,16,36.5s-3.2,23.1-9.5,33c-6.3,9.9-15.4,17.9-27.3,23.9-11.9,6-26.2,9.1-42.8,9.1Z"/><path d="M471.9,181.5l-5.1-84.7.8-21.2h1.8l-7.8,21.2-38,84.7h-49.4l-8.3-135.6h41.1l.5,89.7-.3,22.7h-2l9.3-22.7,41.1-89.7h39.1l6,89.7.3,22.7h-2.3l8.3-22.7,35.8-89.7h39.6l-61.3,135.6h-49.1,0Z"/><path d="M562.1,181.5l26.2-135.6h38.6l-26.2,135.6h-38.6ZM615.5,103.6h-12.9c3.7-14.1,8.5-25.7,14.5-34.9,6-9.2,12.9-16,20.9-20.4,8-4.5,16.7-6.7,26.1-6.7s14.8,1.5,20.7,4.5c5.9,3,10.5,7.5,13.7,13.4,3.3,5.9,4.9,13.2,4.9,21.9s-.1,4.8-.4,7.4c-.3,2.6-.6,5.3-1.1,7.9l-16.6,84.7h-38.6l16.1-82.7c.3-1.7.6-3.2.8-4.7.2-1.4.3-2.8.3-4.2,0-5.7-1.4-10-4.2-12.9-2.8-2.9-7.1-4.3-13-4.3s-7.3.8-10.7,2.3c-3.4,1.5-6.6,3.6-9.3,6.4-2.8,2.8-5.1,6-6.9,9.8-1.8,3.8-3.3,7.8-4.3,12.2h0Z"/><path d="M823.4,99.3l-24.7,14.1c.5-3,.9-5.8,1.2-8.4.3-2.6.5-5.1.5-7.5,0-8.2-1.8-14.5-5.4-18.8-3.6-4.3-8.9-6.4-15.8-6.4s-10.6,1.5-15.1,4.7c-4.5,3.1-8.4,7.4-11.7,12.7-3.3,5.4-5.7,11.4-7.5,18-1.7,6.6-2.5,13.4-2.5,20.3s1.8,15.6,5.5,20c3.7,4.5,9.2,6.7,16.6,6.7s12.1-1.4,17.1-4.2c5.1-2.8,9-7.4,11.9-13.7h40.3c-4.2,10.8-10,19.7-17.5,27-7.5,7.2-15.9,12.6-25.3,16.3-9.4,3.6-19.2,5.4-29.5,5.4-18.2,0-32.5-4.9-43-14.7-10.5-9.8-15.8-23.6-15.8-41.5s1.9-22.7,5.7-33.2c3.8-10.5,9.2-19.9,16.4-28.1,7.1-8.2,15.6-14.7,25.4-19.4,9.8-4.7,20.6-7.1,32.4-7.1,17.8,0,31.6,5,41.3,15,9.7,10,14.6,23.4,14.6,40.2s-.1,5.5-.4,8.6c-.3,3-.6,6-1.1,9.1l-1.2,7.1h-116.9l4-22.2h100.4Z"/><path d="M886.5,185.5c-9.3,0-17.3-2.2-24.1-6.6-6.8-4.4-12-10.6-15.6-18.6-3.6-8.1-5.4-17.5-5.4-28.2s1.8-23.3,5.3-34.1c3.5-10.8,8.5-20.5,15-29,6.5-8.5,14.1-15.2,23-20,8.9-4.9,18.7-7.3,29.5-7.3s22.5,4.4,29.2,13.2,10.1,21.2,10.1,37.2-1.8,25.1-5.4,36.4c-3.6,11.3-8.6,21.3-15,29.9-6.4,8.6-13.6,15.2-21.5,20-8,4.8-16.3,7.2-25.1,7.2h0ZM900.6,154.2c5.5,0,10.5-1.8,15-5.4,4.5-3.6,8.2-8.3,11.3-14,3.1-5.7,5.4-11.9,6.9-18.5,1.5-6.6,2.3-13,2.3-19s-1.6-14-4.9-18.2c-3.3-4.2-8.1-6.3-14.5-6.3s-9.7,1.6-14,4.9c-4.3,3.3-8,7.6-11.2,13-3.2,5.4-5.7,11.5-7.4,18.3-1.8,6.8-2.7,13.7-2.7,20.8s1.6,14,4.8,18.2c3.2,4.2,8,6.3,14.4,6.3ZM921.5,181.5L956.8,0h38.6l-35.3,181.5h-38.6,0Z"/><path d="M199.6,125.5l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,125.5l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,181.5l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,125.5l16.2-83.4H16.2L0,125.5h40.3Z"/><path d="M93.4,125.5l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg>
+    </div>
+    <div class="card" style="display:flex; align-items:center; justify-content:center; height:160px;">
+      <svg width="200" viewBox="0 0 995.4 185.5" fill="#1D72A7"><path d="M201.5,181.5L234.7,10.1h40.3l-33.3,171.4h-40.3ZM280.4,125.5h-15l6.3-32h11.9c7.6,0,13.9-1.4,18.9-4.3,5.1-2.9,8.9-6.7,11.5-11.5,2.6-4.8,3.9-10.2,3.9-16.3s-1.9-10.8-5.8-14.2c-3.9-3.4-9.7-5.2-17.4-5.2h-36.5l6-32h36.5c18.2,0,32.6,4.3,43.2,12.9,10.7,8.6,16,20.7,16,36.5s-3.2,23.1-9.5,33c-6.3,9.9-15.4,17.9-27.3,23.9-11.9,6-26.2,9.1-42.8,9.1Z"/><path d="M471.9,181.5l-5.1-84.7.8-21.2h1.8l-7.8,21.2-38,84.7h-49.4l-8.3-135.6h41.1l.5,89.7-.3,22.7h-2l9.3-22.7,41.1-89.7h39.1l6,89.7.3,22.7h-2.3l8.3-22.7,35.8-89.7h39.6l-61.3,135.6h-49.1,0Z"/><path d="M562.1,181.5l26.2-135.6h38.6l-26.2,135.6h-38.6ZM615.5,103.6h-12.9c3.7-14.1,8.5-25.7,14.5-34.9,6-9.2,12.9-16,20.9-20.4,8-4.5,16.7-6.7,26.1-6.7s14.8,1.5,20.7,4.5c5.9,3,10.5,7.5,13.7,13.4,3.3,5.9,4.9,13.2,4.9,21.9s-.1,4.8-.4,7.4c-.3,2.6-.6,5.3-1.1,7.9l-16.6,84.7h-38.6l16.1-82.7c.3-1.7.6-3.2.8-4.7.2-1.4.3-2.8.3-4.2,0-5.7-1.4-10-4.2-12.9-2.8-2.9-7.1-4.3-13-4.3s-7.3.8-10.7,2.3c-3.4,1.5-6.6,3.6-9.3,6.4-2.8,2.8-5.1,6-6.9,9.8-1.8,3.8-3.3,7.8-4.3,12.2h0Z"/><path d="M823.4,99.3l-24.7,14.1c.5-3,.9-5.8,1.2-8.4.3-2.6.5-5.1.5-7.5,0-8.2-1.8-14.5-5.4-18.8-3.6-4.3-8.9-6.4-15.8-6.4s-10.6,1.5-15.1,4.7c-4.5,3.1-8.4,7.4-11.7,12.7-3.3,5.4-5.7,11.4-7.5,18-1.7,6.6-2.5,13.4-2.5,20.3s1.8,15.6,5.5,20c3.7,4.5,9.2,6.7,16.6,6.7s12.1-1.4,17.1-4.2c5.1-2.8,9-7.4,11.9-13.7h40.3c-4.2,10.8-10,19.7-17.5,27-7.5,7.2-15.9,12.6-25.3,16.3-9.4,3.6-19.2,5.4-29.5,5.4-18.2,0-32.5-4.9-43-14.7-10.5-9.8-15.8-23.6-15.8-41.5s1.9-22.7,5.7-33.2c3.8-10.5,9.2-19.9,16.4-28.1,7.1-8.2,15.6-14.7,25.4-19.4,9.8-4.7,20.6-7.1,32.4-7.1,17.8,0,31.6,5,41.3,15,9.7,10,14.6,23.4,14.6,40.2s-.1,5.5-.4,8.6c-.3,3-.6,6-1.1,9.1l-1.2,7.1h-116.9l4-22.2h100.4Z"/><path d="M886.5,185.5c-9.3,0-17.3-2.2-24.1-6.6-6.8-4.4-12-10.6-15.6-18.6-3.6-8.1-5.4-17.5-5.4-28.2s1.8-23.3,5.3-34.1c3.5-10.8,8.5-20.5,15-29,6.5-8.5,14.1-15.2,23-20,8.9-4.9,18.7-7.3,29.5-7.3s22.5,4.4,29.2,13.2,10.1,21.2,10.1,37.2-1.8,25.1-5.4,36.4c-3.6,11.3-8.6,21.3-15,29.9-6.4,8.6-13.6,15.2-21.5,20-8,4.8-16.3,7.2-25.1,7.2h0ZM900.6,154.2c5.5,0,10.5-1.8,15-5.4,4.5-3.6,8.2-8.3,11.3-14,3.1-5.7,5.4-11.9,6.9-18.5,1.5-6.6,2.3-13,2.3-19s-1.6-14-4.9-18.2c-3.3-4.2-8.1-6.3-14.5-6.3s-9.7,1.6-14,4.9c-4.3,3.3-8,7.6-11.2,13-3.2,5.4-5.7,11.5-7.4,18.3-1.8,6.8-2.7,13.7-2.7,20.8s1.6,14,4.8,18.2c3.2,4.2,8,6.3,14.4,6.3ZM921.5,181.5L956.8,0h38.6l-35.3,181.5h-38.6,0Z"/><path d="M199.6,125.5l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,125.5l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,181.5l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,125.5l16.2-83.4H16.2L0,125.5h40.3Z"/><path d="M93.4,125.5l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg>
+    </div>
+    <div class="card" style="display:flex; align-items:center; justify-content:center; gap:12px; height:160px;">
+      <svg width="60" viewBox="0 0 205.8 139.4" fill="#F6F8FA"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg>
+      <span style="font-size:28px; font-weight:700; font-style:italic;">HaveIBeenPwned.com</span>
+    </div>
+  </div>
+  <div class="grid grid-2">
+    <div>
+      <h3 style="font-size:18px; margin-bottom:12px;">Clear space &amp; minimum size</h3>
+      <p>Keep clear space on every side equal to the width of the tallest bar in the symbol. Never crowd the mark with text, UI chrome or imagery inside this zone.</p>
+      <p>Minimum size: <strong style="color:var(--foreground);">24px</strong> for the symbol alone on screen, <strong style="color:var(--foreground);">120px</strong> wide for the full wordmark lockup, <strong style="color:var(--foreground);">15mm</strong> wide in print.</p>
+    </div>
+    <div>
+      <h3 style="font-size:18px; margin-bottom:12px;">Don't</h3>
+      <div class="grid grid-2" style="gap:12px;">
+        <div class="card dont" style="padding:16px; text-align:center;"><svg width="90" viewBox="0 0 205.8 139.4" fill="#F6F8FA" style="transform:skewX(-20deg)"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg><div style="font-size:12px; color:var(--muted); margin-top:8px;">Skew or stretch</div></div>
+        <div class="card dont" style="padding:16px; text-align:center; background:#D1495B;"><svg width="90" viewBox="0 0 205.8 139.4" fill="#F6F8FA"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg><div style="font-size:12px; color:#fff; margin-top:8px;">Off-palette colour</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Lockups &amp; clear space</span>
+    <span>Spread 04 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 5: COLOUR SYSTEM - BRAND -->
+<section class="spread pad">
+  <div class="eyebrow">Colour System</div>
+  <h2 class="section-title">Brand colours</h2>
+  <div class="grid grid-2">
+    <div class="swatch">
+      <div class="fill" style="background:#1D72A7;"></div>
+      <div class="label"><span class="name">Pwned Blue — Accent</span><span class="hex">#1D72A7 · oklch(0.529 0.113 241.9)</span></div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#152B39;"></div>
+      <div class="label"><span class="name">Deep Navy — Accent Secondary</span><span class="hex">#152B39 · oklch(0.278 0.038 238.2)</span></div>
+    </div>
+  </div>
+  <p style="margin-top:32px; max-width:700px;">Pwned Blue is the single HIBP accent. It appears once per view for the primary action — the Check button, links, headline numbers and the "Pwned" half of the wordmark — never scattered decoratively across a screen. Deep Navy pairs with it only in gradients and banner treatments.</p>
+  <div class="footer-row">
+    <span>Brand colour pair</span>
+    <span>Spread 05 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 6: COLOUR SYSTEM - GREYSCALE + ROLES -->
+<section class="spread pad">
+  <div class="eyebrow">Colour System</div>
+  <h2 class="section-title">Greyscale &amp; semantic roles</h2>
+  <div class="grid grid-7" style="margin-bottom:32px;">
+    <div class="swatch"><div class="fill" style="background:#F6F8FA; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">White</span><span class="hex">#F6F8FA</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#ECF1F4; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 100</span><span class="hex">#ECF1F4</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#D9E2E8; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 200</span><span class="hex">#D9E2E8</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#C1CFD9; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 300</span><span class="hex">#C1CFD9</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#9CB1C2; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 400</span><span class="hex">#9CB1C2</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#6A8AA4; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 500</span><span class="hex">#6A8AA4</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#4B667B; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 600</span><span class="hex">#4B667B</span></div></div>
+  </div>
+  <div class="grid grid-4" style="margin-bottom:32px;">
+    <div class="swatch"><div class="fill" style="background:#374A5A; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 700 — Border</span><span class="hex">#374A5A</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#1D282F; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 800</span><span class="hex">#1D282F</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#131A20; height:80px;"></div><div class="label"><span class="name" style="font-size:13px;">Grey 900 — Surface</span><span class="hex">#131A20</span></div></div>
+    <div class="swatch"><div class="fill" style="background:#030304; height:80px; border:1px solid #374A5A;"></div><div class="label"><span class="name" style="font-size:13px;">Black — Background</span><span class="hex">#030304</span></div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card" style="background:#030304;">
+      <div style="font-size:13px; color:var(--muted); margin-bottom:8px;">BACKGROUND / FOREGROUND</div>
+      <div style="font-size:22px; font-weight:600;">Aa</div>
+    </div>
+    <div class="card" style="background:#1D72A7; color:#F6F8FA;">
+      <div style="font-size:13px; color:#DCEBF4; margin-bottom:8px;">ACCENT / ACCENT TEXT</div>
+      <div style="font-size:22px; font-weight:600;">Aa</div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Greyscale ramp &amp; pairings</span>
+    <span>Spread 06 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 7: TYPOGRAPHY - SPECIMEN -->
+<section class="spread pad light">
+  <div class="eyebrow">Typography</div>
+  <h2 class="section-title" style="color:#030304;">Switzer</h2>
+  <div style="font-size:140px; font-weight:700; font-style:italic; line-height:1; margin-bottom:16px;">Aa</div>
+  <p style="max-width:640px; font-size:18px;">Switzer is the sole typeface across the HIBP site and product. Bold italic carries the wordmark and display headings; regular and medium weights carry everything else. No secondary typeface has been introduced.</p>
+  <div class="footer-row" style="color:#6A8AA4;">
+    <span>Switzer specimen</span>
+    <span>Spread 07 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 8: TYPOGRAPHY - SCALE -->
+<section class="spread pad">
+  <div class="eyebrow">Typography</div>
+  <h2 class="section-title">Type scale</h2>
+  <div class="grid grid-2" style="gap:64px;">
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Headings</h3>
+      <div class="scale-row"><span class="tag">h1</span><span class="px">40px</span><span style="font-size:40px; font-weight:700;">Heading 1</span></div>
+      <div class="scale-row"><span class="tag">h2</span><span class="px">32px</span><span style="font-size:32px; font-weight:700;">Heading 2</span></div>
+      <div class="scale-row"><span class="tag">h3</span><span class="px">28px</span><span style="font-size:28px; font-weight:700;">Heading 3</span></div>
+      <div class="scale-row"><span class="tag">h4</span><span class="px">24px</span><span style="font-size:24px; font-weight:700;">Heading 4</span></div>
+      <div class="scale-row"><span class="tag">h5</span><span class="px">20px</span><span style="font-size:20px; font-weight:700;">Heading 5</span></div>
+      <div class="scale-row"><span class="tag">h6</span><span class="px">16px</span><span style="font-size:16px; font-weight:700;">Heading 6</span></div>
+    </div>
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Display &amp; body</h3>
+      <div style="font-size:32px; font-weight:700; font-style:italic; margin-bottom:8px;">Display heading 1</div>
+      <div style="font-size:26px; font-weight:700; font-style:italic; margin-bottom:8px;">Display heading 2</div>
+      <div style="font-size:21px; font-weight:700; font-style:italic; margin-bottom:24px;">Display heading 3</div>
+      <p style="color:var(--foreground); font-size:18px;">Lead text sits at 18px for intros and standfirsts.</p>
+      <p>Body Medium runs at 16px for the majority of product and marketing copy, with Body Small at 14px for captions and fine print.</p>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Heading &amp; body scale</span>
+    <span>Spread 08 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 9: VOICE & TONE -->
+<section class="spread pad">
+  <div class="eyebrow">Voice &amp; Tone</div>
+  <h2 class="section-title">How HIBP sounds</h2>
+  <div class="grid grid-2">
+    <div>
+      <h3 style="font-size:18px; margin-bottom:16px;">We are</h3>
+      <ul>
+        <li>Direct and matter-of-fact</li>
+        <li>Pragmatic, evidence-based and credible</li>
+        <li>Quietly witty, never forced</li>
+        <li>Transparent about what data is and isn't shown</li>
+        <li>User-first and free of sales pressure</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:18px; margin-bottom:16px;">We are not</h3>
+      <ul>
+        <li>Alarmist or fear-mongering</li>
+        <li>Corporate or jargon-heavy</li>
+        <li>Preachy about security hygiene</li>
+        <li>Salesy or hype-driven</li>
+        <li>Vague about sources or methodology</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid grid-2" style="margin-top:16px;">
+    <div class="card"><strong>Use</strong><p style="margin:8px 0 0;">pwned · breach · exposed · compromised · check · free · data</p></div>
+    <div class="card"><strong>Avoid</strong><p style="margin:8px 0 0;">hacked (sparingly) · victim (prefer affected/impacted) · revolutionary · best-in-class · seamless</p></div>
+  </div>
+  <div class="footer-row">
+    <span>Voice, tone &amp; vocabulary</span>
+    <span>Spread 09 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 10: APPLICATIONS - UI COMPONENTS -->
+<section class="spread pad">
+  <div class="eyebrow">Applications</div>
+  <h2 class="section-title">UI components</h2>
+  <div class="grid grid-2" style="gap:48px;">
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Buttons</h3>
+      <div style="display:flex; gap:16px; margin-bottom:16px;">
+        <button class="btn btn-primary">Check now</button>
+        <button class="btn btn-secondary">Learn more</button>
+        <button class="btn btn-ghost">Cancel</button>
+      </div>
+      <p>Only one primary (accent-filled) button per view — reserved for the single most important action.</p>
+    </div>
+    <div>
+      <h3 style="font-size:16px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:16px;">Inputs</h3>
+      <div class="grid" style="gap:12px;">
+        <input class="input" placeholder="Email address">
+        <input class="input focus" value="name@example.com">
+        <input class="input error" value="not-an-email">
+        <input class="input disabled" value="Disabled" disabled>
+      </div>
+    </div>
+  </div>
+  <div class="footer-row">
+    <span>Buttons &amp; inputs</span>
+    <span>Spread 10 / 11</span>
+  </div>
+</section>
+
+<!-- SPREAD 11: CLOSING -->
+<section class="spread pad surface">
+  <div style="margin-top:220px; text-align:center;">
+    <div class="logo-symbol" style="display:flex; justify-content:center; margin-bottom:32px;">
+      <svg width="90" viewBox="0 0 205.8 139.4" fill="#1D72A7"><path d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/><path d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/><path d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/><path d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/></svg>
+    </div>
+    <h2 style="font-size:32px; font-style:italic; font-weight:700; margin:0 0 12px;">One colour. One typeface. One mark.</h2>
+    <p style="max-width:560px; margin:0 auto;">Questions about using the HIBP brand? Get in touch via troyhunt.com/contact, or contribute assets back to the Branding repository.</p>
+  </div>
+  <div class="footer-row">
+    <span>github.com/HaveIBeenPwned/Branding</span>
+    <span>Spread 11 / 11 — Closing</span>
+  </div>
+</section>
+
+</body>
+</html>

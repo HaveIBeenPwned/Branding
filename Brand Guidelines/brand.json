@@ -1,0 +1,161 @@
+{
+  "name": "Have I Been Pwned",
+  "shortName": "HIBP",
+  "tagline": "Check if your email or phone is in a data breach",
+  "mission": "Have I Been Pwned is a free service that helps people find out if their personal data has been exposed in a data breach, and helps them understand what to do about it. It exists to give ordinary people the same visibility into data breaches that attackers already have, without charging them for the privilege.",
+  "values": [
+    "Free and accessible to everyone, always",
+    "Transparent about data sources and methodology",
+    "Pragmatic and matter-of-fact, never alarmist",
+    "Evidence-based credibility over marketing spin",
+    "Privacy-respecting in how data is collected, stored and shown",
+    "Educational first, commercial second"
+  ],
+  "audience": [
+    "Everyday internet users checking their own exposure",
+    "Security professionals and researchers",
+    "Organisations and developers integrating via the API",
+    "Journalists and media covering breaches",
+    "Government and enterprise subscribers to domain monitoring"
+  ],
+  "colors": [
+    {
+      "role": "background",
+      "name": "Black",
+      "hex": "#030304",
+      "oklch": "oklch(0.098 0.004 285.6)",
+      "usage": "Primary canvas colour for the website and product UI. Nearly all HIBP surfaces sit on true black, not dark grey."
+    },
+    {
+      "role": "surface",
+      "name": "Grey 900",
+      "hex": "#131A20",
+      "oklch": "oklch(0.214 0.016 244.5)",
+      "usage": "Elevated panels, cards, stat tiles and containers that sit above the black background."
+    },
+    {
+      "role": "border",
+      "name": "Grey 700",
+      "hex": "#374A5A",
+      "oklch": "oklch(0.4 0.036 244.3)",
+      "usage": "Dividers, input borders, card outlines and other low-emphasis structural lines."
+    },
+    {
+      "role": "muted",
+      "name": "Grey 500",
+      "hex": "#6A8AA4",
+      "oklch": "oklch(0.619 0.054 243.3)",
+      "usage": "Secondary text, placeholder copy, captions, timestamps and disabled states."
+    },
+    {
+      "role": "foreground",
+      "name": "White",
+      "hex": "#F6F8FA",
+      "oklch": "oklch(0.978 0.003 247.9)",
+      "usage": "Primary text and iconography on dark backgrounds. Off-white, never pure #FFFFFF, to avoid glare on OLED screens."
+    },
+    {
+      "role": "accent",
+      "name": "Pwned Blue",
+      "hex": "#1D72A7",
+      "oklch": "oklch(0.529 0.113 241.9)",
+      "accentText": "#F6F8FA",
+      "usage": "The single HIBP brand colour. Used once per view for the primary action: the Check button, links, the 'Pwned' half of the wordmark, and headline data points. Never used decoratively or repeated across multiple competing elements."
+    },
+    {
+      "role": "accent-secondary",
+      "name": "Deep Navy",
+      "hex": "#152B39",
+      "oklch": "oklch(0.278 0.038 238.2)",
+      "usage": "Paired with Pwned Blue in gradients and banner treatments (e.g. the footer call-to-action band). Not used standalone as an accent."
+    }
+  ],
+  "greyscale": [
+    { "name": "White", "hex": "#F6F8FA" },
+    { "name": "Grey 100", "hex": "#ECF1F4" },
+    { "name": "Grey 200", "hex": "#D9E2E8" },
+    { "name": "Grey 300", "hex": "#C1CFD9" },
+    { "name": "Grey 400", "hex": "#9CB1C2" },
+    { "name": "Grey 500", "hex": "#6A8AA4" },
+    { "name": "Grey 600", "hex": "#4B667B" },
+    { "name": "Grey 700", "hex": "#374A5A" },
+    { "name": "Grey 800", "hex": "#1D282F" },
+    { "name": "Grey 900", "hex": "#131A20" },
+    { "name": "Black", "hex": "#030304" }
+  ],
+  "typography": {
+    "display": {
+      "family": "Switzer",
+      "weight": "Bold / Bold Italic",
+      "usage": "Display headings 1-4 and the wordmark. Always italic when used as a logotype."
+    },
+    "body": {
+      "family": "Switzer",
+      "weight": "Regular / Medium",
+      "usage": "Body copy, UI labels, buttons and form fields."
+    },
+    "mono": {
+      "family": "ui-monospace, 'SFMono-Regular', Consolas, monospace",
+      "usage": "Not yet formalised in the existing design file. Recommended system monospace stack for API/code samples until a brand mono is chosen."
+    },
+    "scale": {
+      "h1": "40px",
+      "h2": "32px",
+      "h3": "28px",
+      "h4": "24px",
+      "h5": "20px",
+      "h6": "16px",
+      "display1": "64px",
+      "display2": "48px",
+      "display3": "36px",
+      "display4": "28px",
+      "bodyMedium": "16px",
+      "bodySmall": "14px",
+      "lead": "18px"
+    }
+  },
+  "logo": {
+    "primary": "Two-line 'Have I Been / \u2039;--Pwned' lockup, italic Switzer Bold, with the symbol inline before 'Pwned'. White on dark backgrounds, with 'Been' and 'Pwned' rendered in a white-to-blue (#F6F8FA \u2192 #1D72A7) gradient in the hero treatment.",
+    "symbol": "The stylised ';--' mark: five angled bars standing in for a password mask. Used alone as the favicon, social avatar and app icon.",
+    "clearSpace": "Keep clear space on all sides equal to the width of the tallest bar in the symbol. Never let text, imagery or UI chrome enter this zone.",
+    "minSize": "24px for the symbol alone; 120px wide for the full wordmark lockup on screen; 15mm wide in print.",
+    "donts": [
+      "Don't recolour the logo outside the defined brand palette",
+      "Don't stretch, skew or rotate the mark",
+      "Don't add drop shadows, outlines, bevels or other effects",
+      "Don't place the logo on busy imagery or low-contrast backgrounds",
+      "Don't recreate the wordmark in another typeface",
+      "Don't separate the symbol from its angled, italic construction"
+    ]
+  },
+  "voice": {
+    "weAre": [
+      "Direct and matter-of-fact",
+      "Pragmatic, evidence-based and credible",
+      "Quietly witty, never forced",
+      "Transparent about what data is and isn't shown",
+      "User-first and free of sales pressure"
+    ],
+    "weAreNot": [
+      "Alarmist or fear-mongering",
+      "Corporate or jargon-heavy",
+      "Preachy about security hygiene",
+      "Salesy or hype-driven",
+      "Vague about sources or methodology"
+    ],
+    "vocabulary": {
+      "use": ["pwned", "breach", "exposed", "compromised", "check", "free", "data"],
+      "avoid": ["hacked (use sparingly)", "victim (prefer affected/impacted)", "revolutionary", "best-in-class", "seamless"]
+    },
+    "registers": {
+      "product": "Concise and direct, written for a non-technical reader checking their own exposure.",
+      "social": "Slightly wry and dry, reflecting the tongue-in-cheek 'pwned' branding without undermining the seriousness of breaches.",
+      "documentation": "Precise, technical and example-driven for the API and developer audience.",
+      "press": "Measured, factual and credible, free of hype."
+    }
+  },
+  "layout": {
+    "radius": "8px",
+    "spacingBase": "8px"
+  }
+}
