@@ -9,7 +9,7 @@ For questions about using the HIBP brand, visit [support.haveibeenpwned.com](htt
 ## Files
 
 - **`brand.json`** — the source of truth for positioning, colour roles, typography, logo usage, voice, communication and evidence.
-- **`brand-book.html`** — the 18-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
+- **`brand-book.html`** — the 19-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
 - **`assets/`** — local copies of the website logos, the repository's three logo forms, selected official merchandise images and recreated branded-title SVGs.
   Keep this folder with the HTML when sharing it.
 - **`tokens.css`** and **`tokens.json`** — reusable colour, typography and layout values kept in sync with `brand.json`.
@@ -48,21 +48,22 @@ Once the custom domain is enabled, GitHub Pages redirects the default repository
 1. Introduction
 2. Mission & principles
 3. Logo system — the symbol & live loading animation
-4. Logo system — three forms & their contexts
-5. Logo system — lockups, clear space & usage
-6. Brand expression — other words & titles
-7. Colour system — brand colours & gradients
-8. Colour system — greyscale & semantic roles
-9. Typography — Switzer specimen
-10. Typography — type scale & responsive numbers
-11. Voice & tone
-12. Applications — UI components
-13. Merchandise — the three forms in use
-14. Merchandise — tonal, patterned & slogan treatments
-15. Positioning — audience & naming guidance
-16. Communication — results, notifications & privacy
-17. Trust — evidence, attribution & sponsorship
-18. Closing
+4. Logo system — icon geometry & construction lines
+5. Logo system — three forms & their contexts
+6. Logo system — lockups, clear space & usage
+7. Brand expression — other words & titles
+8. Colour system — brand colours & gradients
+9. Colour system — greyscale & semantic roles
+10. Typography — Switzer specimen
+11. Typography — type scale & responsive numbers
+12. Voice & tone
+13. Applications — UI components
+14. Merchandise — the three forms in use
+15. Merchandise — tonal, patterned & slogan treatments
+16. Positioning — audience & naming guidance
+17. Communication — results, notifications & privacy
+18. Trust — evidence, attribution & sponsorship
+19. Closing
 
 ## Basis and limits
 
@@ -91,6 +92,11 @@ Its five SVG paths and `pulseFade` timing are preserved: a 1.5-second pulse with
 The example adds static reduced-motion and print fallbacks.
 Use it to indicate loading or work in progress, alongside a status label, until a result or error is available.
 The source stylesheet and animation details are recorded under `logo.animation` in `brand.json`.
+
+The geometry spread uses the unchanged icon paths in an engineering-style SVG diagram.
+It highlights the five parallelograms, equal horizontal widths, common lean and aligned sides and baselines.
+Construction guides explain the design rather than prescribing a redraw from rounded source coordinates.
+The diagram and measured relationships are recorded under `logo.geometry` in `brand.json`.
 
 The three monochrome form examples are unchanged copies of the repository SVGs:
 `Logos/Icon/Icon.svg`, `Logos/Icon Pwned/Icon Pwned.svg` and
