@@ -9,7 +9,7 @@ For questions about using the HIBP brand, visit [support.haveibeenpwned.com](htt
 ## Files
 
 - **`brand.json`** — the source of truth for positioning, colour roles, typography, logo usage, voice, communication and evidence.
-- **`brand-book.html`** — the 19-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
+- **`brand-book.html`** — the 20-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
 - **`assets/`** — local copies of the website logos, the repository's three logo forms, selected official merchandise images and recreated branded-title SVGs.
   Keep this folder with the HTML when sharing it.
 - **`tokens.css`** and **`tokens.json`** — reusable colour, typography and layout values kept in sync with `brand.json`.
@@ -47,23 +47,24 @@ Once the custom domain is enabled, GitHub Pages redirects the default repository
 
 1. Introduction
 2. Mission & principles
-3. Logo system — the symbol & live loading animation
-4. Logo system — icon geometry & construction lines
-5. Logo system — three forms & their contexts
-6. Logo system — lockups, clear space & usage
-7. Brand expression — other words & titles
-8. Colour system — brand colours & gradients
-9. Colour system — greyscale & semantic roles
-10. Typography — Switzer specimen
-11. Typography — type scale & responsive numbers
-12. Voice & tone
-13. Applications — UI components
-14. Merchandise — the three forms in use
-15. Merchandise — tonal, patterned & slogan treatments
-16. Positioning — audience & naming guidance
-17. Communication — results, notifications & privacy
-18. Trust — evidence, attribution & sponsorship
-19. Closing
+3. The name — what "pwned" means
+4. Logo system — character construction & live loading animation
+5. Logo system — icon geometry & construction lines
+6. Logo system — three forms & their contexts
+7. Logo system — lockups, clear space & usage
+8. Brand expression — other words & titles
+9. Colour system — brand colours & gradients
+10. Colour system — greyscale & semantic roles
+11. Typography — Switzer specimen
+12. Typography — type scale & responsive numbers
+13. Voice & tone
+14. Applications — UI components
+15. Merchandise — the three forms in use
+16. Merchandise — tonal, patterned & slogan treatments
+17. Positioning — audience & naming guidance
+18. Communication — results, notifications & privacy
+19. Trust — evidence, attribution & sponsorship
+20. Closing
 
 ## Basis and limits
 
@@ -79,6 +80,12 @@ The complete source URLs are recorded in `brand.json` under `evidence`.
 Older coverage supports historical reputation, not current staffing or product details.
 Use the current privacy policy and product documentation when publishing service-specific claims.
 
+The word-meaning page was added from sources reviewed on **14 November 2026**.
+It leads with a short Oxford English Dictionary definition excerpt, verified through publicly indexed entry text because direct access returned HTTP 403.
+It references Danny Paez's Inverse history (2020; updated 2024) and HIBP's own explanation.
+Disputed origin anecdotes are treated as folklore, not definitive etymology.
+The wording, source links and review details are recorded under `wordMeaning` in `brand.json`.
+
 The logo assets were retrieved from:
 
 - `https://haveibeenpwned.com/Images/Hero.svg`
@@ -87,7 +94,12 @@ The logo assets were retrieved from:
 These are complete source assets, not reconstructed lockups.
 The hero's pale-blue `#C8E5F8` gradient endpoint is documented under `logo.primary`; it is not a general-purpose semantic colour role.
 
-The symbol spread embeds a working loading animation retrieved from the website homepage.
+The symbol spread maps the `';--` pattern to the icon's five shapes using an annotated SVG.
+The apostrophe is the tall left bar, the semicolon is the stacked pair, and the two hyphens are the short right-hand bars.
+The diagram preserves the original paths and spacing; it explains a stylised interpretation, not a typed replacement for the logo.
+The mapping is recorded under `logo.characterConstruction` in `brand.json`.
+
+The same spread embeds a working loading animation retrieved from the website homepage.
 Its five SVG paths and `pulseFade` timing are preserved: a 1.5-second pulse with 0.3-second offsets between bars.
 The example adds static reduced-motion and print fallbacks.
 Use it to indicate loading or work in progress, alongside a status label, until a result or error is available.
