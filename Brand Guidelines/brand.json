@@ -10,6 +10,32 @@
     "identity": "Founder-led and personally accountable, supported by a visible team. Do not describe HIBP as a one-person operation.",
     "naming": "Use Have I Been Pwned on first mention and HIBP thereafter. Retain Pwned Passwords as the service name. Explain 'pwned' in plain English for unfamiliar audiences; use supplied artwork rather than typing a replacement logo."
   },
+  "wordMeaning": {
+    "word": "pwned",
+    "baseVerb": "pwn",
+    "pronunciation": "Say 'poned'; rhymes with 'owned'.",
+    "dictionary": {
+      "publisher": "Oxford English Dictionary",
+      "entry": "pwn, v.",
+      "url": "https://www.oed.com/dictionary/pwn_v?tl=true",
+      "definitionExcerpt": "To inflict a humiliating defeat on (an opponent), esp. in an online game. Also: to gain unauthorized access to or compromise (a computer, network, etc.).",
+      "verification": "Short definition excerpt verified against publicly indexed OED entry text. Direct access to the entry returned HTTP 403."
+    },
+    "history": "A misspelling of 'owned', associated with neighbouring O and P keys on QWERTY keyboards. Inverse traces the word through hacker slang, gaming and wider internet culture. Its exact beginnings are disputed; early chess and programming anecdotes should not be presented as established fact.",
+    "gamingMeaning": "To be thoroughly outplayed or defeated.",
+    "securityMeaning": "To be controlled or compromised. In HIBP, the practical question is whether a person's information appeared in a data breach; a match is not proof that their device is under an attacker's control.",
+    "tone": "Light-hearted about the word and its internet heritage, never mocking or blaming people affected by a breach. A cheeky name. A serious job.",
+    "historySource": {
+      "author": "Danny Paez",
+      "title": "How PWNED went from hacker slang to the internet's favorite taunt",
+      "publisher": "Inverse",
+      "url": "https://www.inverse.com/gaming/pwned-meaning-definition-origins-video-games-internet-hackers",
+      "publishedOn": "2020-03-17",
+      "updatedOn": "2024-02-20"
+    },
+    "serviceSource": "https://haveibeenpwned.com/FAQs",
+    "reviewedOn": "2026-11-14"
+  },
   "values": [
     "Public benefit at the core, with free email checking, notifications and Pwned Passwords alongside paid services",
     "Transparent about data sources and methodology",
@@ -154,7 +180,16 @@
         "usage": "Full introduction for covers, prominent placements and unfamiliar audiences. The stacked form suits drinkware and taller spaces; small chest applications need legibility checks."
       }
     ],
-    "symbol": "The logo's ';-- represents a component of a SQL injection attack, the vector by which many data breaches in HIBP were caused. The distinctive mark comprises five angled bars. Preserve its supplied geometry; use the standalone asset where a full wordmark is impractical.",
+    "symbol": "The icon is a stylised representation of ';--: an apostrophe, a semicolon and two hyphens. This pattern represents a component of a SQL injection attack, the vector by which many data breaches in HIBP were caused. Four characters become five parallelograms. Preserve the supplied artwork rather than substituting typed punctuation.",
+    "characterConstruction": {
+      "pattern": "';--",
+      "diagram": "assets/icon-characters.svg",
+      "apostrophe": "The tall left parallelogram represents the apostrophe.",
+      "semicolon": "The two stacked parallelograms represent the semicolon's dot and lower tail.",
+      "hyphens": "Each of the two short parallelograms on the right represents one hyphen.",
+      "interpretation": "The icon is a geometric interpretation of the characters, not punctuation rendered in a typeface. Four characters correspond to five shapes because the semicolon uses two separate pieces.",
+      "sourceFidelity": "The diagram preserves the five supplied icon paths and their relative positions; labels and brackets are explanatory annotations."
+    },
     "geometry": {
       "diagram": "assets/icon-geometry.svg",
       "source": "Logos/Icon/Icon.svg",
@@ -316,7 +351,9 @@
       "https://www.nist.gov/cybersecurity-and-privacy/how-do-i-create-good-password",
       "https://www.justice.gov/usao-cdca/divisions/national-security-division/qakbot-resources",
       "https://www.consumerreports.org/electronics/data-theft/how-to-use-have-i-been-pwned-data-breach-a6598286668/",
-      "https://www.abc.net.au/news/2023-09-23/cybersecurity-troy-hunt-have-i-been-pwned-fighting-data-breaches/102803748"
+      "https://www.abc.net.au/news/2023-09-23/cybersecurity-troy-hunt-have-i-been-pwned-fighting-data-breaches/102803748",
+      "https://www.oed.com/dictionary/pwn_v?tl=true",
+      "https://www.inverse.com/gaming/pwned-meaning-definition-origins-video-games-internet-hackers"
     ]
   }
 }

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="636" height="420" viewBox="0 0 636 420" role="img" aria-labelledby="title description">
+  <title id="title">How the characters ';-- form the HIBP icon</title>
+  <desc id="description">The tall left parallelogram represents the apostrophe. The two stacked parallelograms represent the semicolon's dot and lower tail. Each short parallelogram on the right represents one hyphen. Four characters become five shapes; all original icon paths and positions are preserved.</desc>
+  <rect width="636" height="420" rx="8" fill="#131A20"/>
+  <text x="318" y="28" text-anchor="middle" font-family="monospace" font-size="13" letter-spacing="1.2" fill="#9CB1C2">FOUR CHARACTERS / FIVE SHAPES</text>
+  <text x="318" y="76" text-anchor="middle" font-family="monospace" font-size="48" fill="#F6F8FA">';--</text>
+
+  <g id="source-icon" transform="translate(170 110) scale(1.5)" fill="#F6F8FA">
+    <path data-character="second-hyphen" d="M199.6,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/>
+    <path data-character="first-hyphen" d="M146.5,83.4l6.2-32h-40.3l-6.2,32h40.3Z"/>
+    <path data-character="semicolon-tail" d="M82.6,139.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/>
+    <path data-character="apostrophe" d="M40.3,83.4L56.5,0H16.2L0,83.4h40.3Z"/>
+    <path data-character="semicolon-dot" d="M93.4,83.4l8.4-43.2h-40.3l-8.4,43.2h40.3Z"/>
+  </g>
+
+  <g fill="none" stroke="#6A8AA4" stroke-width="1.5">
+    <path d="M125 153H157L209 173"/>
+    <path d="M339.45 240V248H469.4V240M404.425 248H491"/>
+    <path d="M321 170.3H328V319.1H307M328 302V341H276V350"/>
+  </g>
+  <circle cx="209" cy="173" r="3" fill="#C8E5F8"/>
+  <g font-family="monospace" font-size="28" fill="#C8E5F8">
+    <text x="24" y="138">'</text>
+    <text x="504" y="201">--</text>
+    <text x="246" y="377">;</text>
+  </g>
+  <g font-family="sans-serif" font-size="18" fill="#F6F8FA">
+    <text x="24" y="169">Apostrophe</text>
+    <text x="504" y="225">Two hyphens</text>
+    <text x="277" y="373">Semicolon</text>
+  </g>
+  <g font-family="sans-serif" font-size="16" fill="#C1CFD9">
+    <text x="24" y="192">One tall bar</text>
+    <text x="504" y="248">Two short bars</text>
+    <text x="318" y="400" text-anchor="middle">Two stacked bars: dot and tail</text>
+  </g>
+</svg>
