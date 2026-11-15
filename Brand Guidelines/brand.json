@@ -2,6 +2,91 @@
   "name": "Have I Been Pwned",
   "shortName": "HIBP",
   "brandingSupportUrl": "https://support.haveibeenpwned.com",
+  "tradeMarks": {
+    "owner": "Superlative Enterprises Pty Ltd",
+    "jurisdiction": "Australia",
+    "registry": "IP Australia",
+    "class": 42,
+    "attribution": "Have I Been Pwned and the registered logo variants are trade marks of Superlative Enterprises Pty Ltd, registered in Australia.",
+    "registrations": [
+      {
+        "number": "2010477",
+        "representation": "Have I Been Pwned (word mark)",
+        "filedOn": "2019-05-20",
+        "registeredFrom": "2019-05-20",
+        "enteredOnRegister": "2021-08-16",
+        "expiresOn": "2029-05-20",
+        "servicesSummary": "Online computer and network security testing, risk assessment and security assessment.",
+        "url": "https://search.ipaustralia.gov.au/trademarks/search/view/2010477",
+        "documents": [
+          "187468_Registration Details_Trade Mark 2010477.pdf",
+          "187468 IP Right Registered.pdf"
+        ]
+      },
+      {
+        "number": "2529110",
+        "representation": "Icon + Pwned + HaveIBeenPwned.com",
+        "filedOn": "2025-03-11",
+        "registeredFrom": "2025-03-11",
+        "enteredOnRegister": "2025-10-20",
+        "expiresOn": "2035-03-11",
+        "url": "https://search.ipaustralia.gov.au/trademarks/search/view/2529110",
+        "documents": [
+          "211442_Certificate of Registration.pdf",
+          "211442_Registration Details_Trade Mark 2529110.pdf"
+        ]
+      },
+      {
+        "number": "2529118",
+        "representation": "Standalone icon",
+        "filedOn": "2025-03-11",
+        "registeredFrom": "2025-03-11",
+        "enteredOnRegister": "2025-10-20",
+        "expiresOn": "2035-03-11",
+        "url": "https://search.ipaustralia.gov.au/trademarks/search/view/2529118",
+        "documents": ["211443_Certificate of Registration.pdf"]
+      },
+      {
+        "number": "2529119",
+        "representation": "Icon + Pwned",
+        "filedOn": "2025-03-11",
+        "registeredFrom": "2025-03-11",
+        "enteredOnRegister": "2025-10-20",
+        "expiresOn": "2035-03-11",
+        "url": "https://search.ipaustralia.gov.au/trademarks/search/view/2529119",
+        "documents": ["211444_Certificate of Registration.pdf"]
+      },
+      {
+        "number": "2529120",
+        "representation": "Have I Been + icon + Pwned",
+        "filedOn": "2025-03-11",
+        "registeredFrom": "2025-03-11",
+        "enteredOnRegister": "2025-10-20",
+        "expiresOn": "2035-03-11",
+        "url": "https://search.ipaustralia.gov.au/trademarks/search/view/2529120",
+        "documents": ["211445_Certificate of Registration.pdf"]
+      }
+    ],
+    "logoServicesSummary": "All four 2025 logo registrations cover computer and data security services, including threat analysis, vulnerability assessment, consultancy, monitoring for unauthorised access or data breaches, research and maintenance of online databases as data security services.",
+    "scopeNote": "Service descriptions are summaries, not the complete registered specifications. These are Australian registrations for specified Class 42 services, not a claim of worldwide protection or protection in every class. Refer to the linked register entries for full details and current status.",
+    "verification": "Dates and ownership extracted from the supplied registration documents; the four logo representations were visually checked against the certificates. Expiry dates are those stated in the certificates, not a live status check.",
+    "reviewedOn": "2026-11-16"
+  },
+  "businessName": {
+    "registeredName": "HAVE I BEEN PWNED",
+    "holder": "Superlative Enterprises Pty Ltd",
+    "abn": "62 085 442 020",
+    "acn": "085 442 020",
+    "registeredOn": "2022-10-28",
+    "registry": "Australian Securities & Investments Commission (ASIC)",
+    "asicUrl": "https://connectonline.asic.gov.au/RegistrySearch/bySearchId.jsp?searchIdType=BUSN&searchId=663452604",
+    "abnLookupUrl": "https://abr.business.gov.au/ABN/View?abn=62085442020",
+    "registrationRecordUrl": "https://support.haveibeenpwned.com/hc/en-au/article_attachments/8172775816847",
+    "companyDetailsUrl": "https://support.haveibeenpwned.com/hc/en-au/articles/7599568307983-What-are-your-contact-company-or-vendor-details",
+    "distinction": "Business-name registration identifies the name the business operates under; it is separate from trade mark registration.",
+    "verification": "ASIC's live business-name record could not be retrieved: text access returned the search landing page and browser access was blocked. The ASIC-issued Record of Registration published by HIBP confirms the name and 28 October 2022 registration date. Current ABN Lookup lists the business name from that date under the holder's ABN and links to ASIC record 663452604. HIBP's company-details page also identifies the controlling entity. The original ASIC certificate's renewal date is historical; no current renewal date or live ASIC status is asserted.",
+    "reviewedOn": "2026-11-16"
+  },
   "assetDownloads": {
     "repository": "https://github.com/HaveIBeenPwned/Branding",
     "zip": "https://github.com/HaveIBeenPwned/Branding/archive/refs/heads/main.zip",

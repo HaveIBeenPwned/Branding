@@ -9,7 +9,7 @@ For questions about using the HIBP brand, visit [support.haveibeenpwned.com](htt
 ## Files
 
 - **`brand.json`** — the source of truth for positioning, colour roles, typography, logo usage, voice, communication and evidence.
-- **`brand-book.html`** — the 21-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
+- **`brand-book.html`** — the 22-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
 - **`assets/`** — local copies of the website logos, the repository's three logo forms, selected official merchandise images and recreated branded-title SVGs.
   Keep this folder with the HTML when sharing it.
 - **`tokens.css`** and **`tokens.json`** — reusable colour, typography and layout values kept in sync with `brand.json`.
@@ -65,9 +65,21 @@ Once the custom domain is enabled, GitHub Pages redirects the default repository
 18. Communication — results, notifications & privacy
 19. Trust — evidence, attribution & sponsorship
 20. Resources — repository & downloadable assets
-21. Closing
+21. Trade marks & business name — Australian registrations, ownership & scope
+22. Closing
 
 ## Basis and limits
+
+The trade mark page summarises five Australian Class 42 registrations owned by Superlative Enterprises Pty Ltd.
+Registration numbers, effective dates, register-entry dates and certificate expiry dates were extracted from seven supplied documents on **16 November 2026**.
+The four logo representations were also visually checked against their certificates.
+The page links each mark to IP Australia's register; the service descriptions are summaries, not the complete registered specifications or a live status check.
+Document filenames and extracted facts are recorded under `tradeMarks` in `brand.json`; private certificates and addresses are not copied into the repository.
+
+The business name **HAVE I BEEN PWNED**, registered on **28 October 2022**, was checked against the ASIC-issued registration record published on HIBP's support site and the government's current ABN Lookup.
+ASIC's direct record link returned a search landing page to text retrieval and blocked browser access.
+The original ASIC record contains a historical renewal date, so the book does not assert a current renewal date or live ASIC status.
+The holder, ABN, ACN, source links and verification limits are recorded under `businessName` in `brand.json`.
 
 The resources page links to the official GitHub repository, its main asset folders and the full ZIP download.
 It explains individual-file downloads and gives a high-level overview of artwork, backgrounds, physical-production assets and brand resources.
