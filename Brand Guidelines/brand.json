@@ -2,6 +2,42 @@
   "name": "Have I Been Pwned",
   "shortName": "HIBP",
   "brandingSupportUrl": "https://support.haveibeenpwned.com",
+  "assetDownloads": {
+    "repository": "https://github.com/HaveIBeenPwned/Branding",
+    "zip": "https://github.com/HaveIBeenPwned/Branding/archive/refs/heads/main.zip",
+    "individualFile": "Open the file on GitHub and choose Download raw file, or open Raw and save.",
+    "wholeCollection": "Choose Code > Download ZIP on the repository page, or use the direct ZIP link.",
+    "categories": [
+      {
+        "name": "Logos",
+        "url": "https://github.com/HaveIBeenPwned/Branding/tree/main/Logos",
+        "overview": "Standalone icons, compact Pwned wordmarks and full-name lockups, with vector originals and selected PNG exports."
+      },
+      {
+        "name": "Wallpapers",
+        "url": "https://github.com/HaveIBeenPwned/Branding/tree/main/Wallpapers",
+        "overview": "Branded backgrounds in different sizes and aspect ratios for desktops, wide displays and social headers."
+      },
+      {
+        "name": "Merch",
+        "url": "https://github.com/HaveIBeenPwned/Branding/tree/main/Merch",
+        "overview": "Artwork and project files for physical items, including stickers and 3D-printed logos. Check dimensions, materials and printer settings before production."
+      },
+      {
+        "name": "Special Use Cases",
+        "url": "https://github.com/HaveIBeenPwned/Branding/tree/main/Special%20Use%20Cases",
+        "overview": "Purpose-specific treatments, such as slogans and store artwork; contextual expressions rather than replacements for the primary logo system."
+      },
+      {
+        "name": "Brand Guidelines",
+        "url": "https://github.com/HaveIBeenPwned/Branding/tree/main/Brand%20Guidelines",
+        "overview": "The book, structured brand data and CSS/JSON design tokens. Illustrated examples explain usage and are not production masters."
+      }
+    ],
+    "formats": "SVG for scalable artwork; AI for Illustrator source files; PNG/JPG for ready-sized images; 3MF for 3D-print projects. Formats vary by asset.",
+    "usage": "Download the original files rather than copying screenshots or rebuilding logos. Follow the book's logo, colour and context guidance; direct questions to the branding support portal.",
+    "reviewedOn": "2026-11-16"
+  },
   "tagline": "Check if your email address is in a data breach",
   "mission": "Have I Been Pwned helps people and organisations understand their exposure to data breaches and take informed action. It combines accessible public services with breach intelligence for the professionals protecting others.",
   "positioning": {

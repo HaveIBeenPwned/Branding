@@ -9,7 +9,7 @@ For questions about using the HIBP brand, visit [support.haveibeenpwned.com](htt
 ## Files
 
 - **`brand.json`** — the source of truth for positioning, colour roles, typography, logo usage, voice, communication and evidence.
-- **`brand-book.html`** — the 20-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
+- **`brand-book.html`** — the 21-spread book (1440×900 per spread). Open in a browser or print to PDF in landscape with no margins.
 - **`assets/`** — local copies of the website logos, the repository's three logo forms, selected official merchandise images and recreated branded-title SVGs.
   Keep this folder with the HTML when sharing it.
 - **`tokens.css`** and **`tokens.json`** — reusable colour, typography and layout values kept in sync with `brand.json`.
@@ -64,9 +64,14 @@ Once the custom domain is enabled, GitHub Pages redirects the default repository
 17. Positioning — audience & naming guidance
 18. Communication — results, notifications & privacy
 19. Trust — evidence, attribution & sponsorship
-20. Closing
+20. Resources — repository & downloadable assets
+21. Closing
 
 ## Basis and limits
+
+The resources page links to the official GitHub repository, its main asset folders and the full ZIP download.
+It explains individual-file downloads and gives a high-level overview of artwork, backgrounds, physical-production assets and brand resources.
+Repository folders were checked on **16 November 2026**; links and descriptions are recorded under `assetDownloads` in `brand.json`.
 
 Reviewed on **13 November 2026**.
 Visual references combine existing brand assets with sampled public website usage.
